@@ -1,3 +1,5 @@
+#pragma once
+
 
 #include <iostream>
 #include <fstream>
@@ -21,15 +23,15 @@ public:
 
 	long double epoch_time;
 
-	string start_lat;
+	long double start_lat;
 
-	string start_lng;
+	long double start_lng;
 
-	string end_lat;
+	long double end_lat;
 
-	string end_lng;
+	long double end_lng;
 
-	string ride_value;
+	long double ride_value;
 	
 };
 
