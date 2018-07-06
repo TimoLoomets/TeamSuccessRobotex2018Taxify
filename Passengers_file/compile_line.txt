@@ -1,0 +1,1 @@
+g++ main.cpp passenger_info.h stdafx.h Passengers_file.cpp --std=c++11

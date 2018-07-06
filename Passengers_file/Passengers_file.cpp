@@ -1,5 +1,5 @@
 
-#include "stdafx.h"
+
 #include "passenger_info.h" 
 #include <iostream>
 #include <fstream>
