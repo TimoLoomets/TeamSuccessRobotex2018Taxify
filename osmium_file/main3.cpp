@@ -20,43 +20,23 @@
 std::map<osmium::Location, std::map<osmium::Location, double> > road_graph;
     
 void simplify_node(std::pair<osmium::Location, std::map<osmium::Location, double> > start_node){
-	std::cout << "c1" << "\n";
 	std::vector<std::pair<osmium::Location, double> > end_nodes;  
-	std::cout << "c2" << "\n";
 	for(auto end_node : start_node.second){
-		std::cout << "c3" << "\n";
 		end_nodes.push_back(end_node);
-		std::cout << "c4" << "\n";
 	}
 	if(end_nodes.size() == 2){
-		std::cout << "c5" << "\n";
 		double distance = end_nodes[0].second + end_nodes[1].second;
-		std::cout << "c6" << "\n";
 		osmium::Location a = end_nodes[0].first;
-		std::cout << "c6.0" << "\n";
 		osmium::Location b = end_nodes[1].first;
-		std::cout << "c6.1" << "\n";
-		std::cout << a << b << "\n";
-		std::cout << "c6.2" << "\n";
-		for(auto elem : road_graph[end_nodes[0].first]){
-			std::cout << elem.first << " : " << elem.second;
-		}
-		std::cout << "c6.3" << "\n";
-//		road_graph[end_nodes[0].first][end_nodes[1].first] = distance;
 
 		std::map<osmium::Location, double> temp;
 		temp.insert(std::make_pair(end_nodes[1].first, distance));
 		
 		road_graph.insert(std::make_pair(end_nodes[0].first, temp));
-		std::cout << "c7" << "\n";
 		road_graph[end_nodes[1].first][end_nodes[0].first] = distance;
-		std::cout << "c8" << "\n";
 		road_graph.erase(start_node.first);
-		std::cout << "c9" << "\n";
-		simplify_node(std::make_pair(end_nodes[0].first, road_graph[end_nodes[0].first]));
-		std::cout << "c10" << "\n";
-		simplify_node(std::make_pair(end_nodes[1].first, road_graph[end_nodes[1].first]));
-		std::cout << "c11" << "\n";
+		//simplify_node(std::make_pair(end_nodes[0].first, road_graph[end_nodes[0].first]));
+		//simplify_node(std::make_pair(end_nodes[1].first, road_graph[end_nodes[1].first]));
 	}
 }
     
@@ -111,14 +91,16 @@ int main() {
     	simplify_node(start_node);
     }
     
-    int counter = 0;
     
-    for(auto start_node : road_graph){
-    	std::cout << start_node.first << "\n";
-    	counter++;
-    	for(auto end_node : start_node.second){
-    		std::cout << "\t" << end_node.first << " - " << end_node.second << "\n";
-    	}
-    }
-    std::cout << counter << "\n";
+	int counter = 0;
+	
+	for(auto start_node : road_graph){
+		std::cout << start_node.first << "\n";
+		counter++;
+		for(auto end_node : start_node.second){
+			std::cout << "\t" << end_node.first << " - " << end_node.second << "\n";
+		}
+	}
+	std::cout << counter << "\n";
+	
 }
