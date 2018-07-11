@@ -5,16 +5,22 @@ using namespace std;
 typedef pair<pair<double, double>, pair<double, double> > road; // Change this to whatever suits you
 const int square_amount = 100; // Change this to be the amount of squares at the lowest level (must be divisible by four)
 
+/*
 const int northwest = 0;
 const int southwest = 1;
 const int southeast = 2;
 const int notheast = 3;
+*/
+#define northwest 0
+#define southwest 1
+#define southeast 2
+#define notheast 3
 
 // This is the actual data structure
 
-int tree_size = square_amount * 2 * 4;
+const int tree_size = square_amount * 2 * 4;//square_amount * 2 * 4
 
-vector<road>[tree_size] tree;
+vector<road> tree[tree_size];
 
 inline int parent(int node){
   return node/2;
