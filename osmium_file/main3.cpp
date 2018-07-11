@@ -70,7 +70,7 @@ public:
 };
 
 
-int main() {
+std::map<std::pair<double, double>, std::map<std::pair<double, double>, double> > get_map_graph() {
     std::string input_file = "estonia-latest.osm.pbf";
     
     
@@ -91,7 +91,7 @@ int main() {
     	simplify_node(start_node);
     }
     
-    
+    /*
 	int counter = 0;
 	
 	for(auto start_node : road_graph){
@@ -102,5 +102,29 @@ int main() {
 		}
 	}
 	std::cout << counter << "\n";
+	*/
+	std::map<std::pair<double, double>, std::map<std::pair<double, double>, double> > output_graph;
 	
+	for(auto start_node : road_graph){
+		//std::cout << start_node.first << "\n";
+		osmium::Location start_location = start_node.first;
+		std::pair<double, double> start_location_o = std::make_pair(start_location.lat(), start_location.lon());
+		for(auto end_node : start_node.second){
+			//std::cout << "\t" << end_node.first << " - " << end_node.second << "\n";
+			osmium::Location end_location = end_node.first;
+			std::pair<double, double> end_location_o = std::make_pair(end_location.lat(), end_location.lon());
+			output_graph[start_location_o][end_location_o] = end_node.second;
+		}
+	}
+	int counter = 0;
+	
+	for(auto start_node : output_graph){
+		std::cout << start_node.first.first << " , " << start_node.first.second << "\n";
+		counter++;
+		for(auto end_node : start_node.second){
+			std::cout << "\t" << end_node.first.first << " , " << end_node.first.second << " - " << end_node.second << "\n";
+		}
+	}
+	std::cout << counter << "\n";
+	return output_graph;
 }
