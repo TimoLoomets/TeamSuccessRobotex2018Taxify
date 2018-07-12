@@ -61,8 +61,8 @@ public:
 		    		osmium::NodeRef& node1 = road[i+1];
 		    		//std::cout << "\t" << node0.ref() << ": " << node0.lon() << ", " << node0.lat() << '\n';
 					
-					road_graph[node0.location()][node1.location()] = haversine_distance(node0.lon(), node0.lat(), node1.lon(), node1.lat());
-					road_graph[node1.location()][node0.location()] = haversine_distance(node0.lon(), node0.lat(), node1.lon(), node1.lat());
+					road_graph[node0.location()][node1.location()] = vincety_distance(node0.lon(), node0.lat(), node1.lon(), node1.lat());
+					road_graph[node1.location()][node0.location()] = vincety_distance(node0.lon(), node0.lat(), node1.lon(), node1.lat());
 				}
 		    }
 		}

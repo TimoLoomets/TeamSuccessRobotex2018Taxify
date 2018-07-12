@@ -38,10 +38,10 @@ int main(){
 			if(end_node.second > longest_road)longest_road = end_node.second;
 		}
 	}
-	std::cout << counter << "\n";
-	std::cout << first_check << "\n";
-	std::cout << second_check << "\n";
-	std::cout << longest_road << "\n";
+	std::cout << "Number of roads: " << counter << "\n";
+	std::cout << "First in order: " << first_check << "\n";
+	std::cout << "Second in order: " << second_check << "\n";
+	std::cout << "Longest road: " << longest_road << "\n";
 	
 	
 	vector <depos_data> depos_locations = get_depos_coordinates();
