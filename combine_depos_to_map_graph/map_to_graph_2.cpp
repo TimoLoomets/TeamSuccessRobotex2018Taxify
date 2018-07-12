@@ -16,10 +16,11 @@
 #define Tallinn_W 24.275665283
 #define Tallinn_E 25.190277100
 
-std::map<osmium::Location, std::map<osmium::Location, double> > road_graph;
+std::map<std::pair<double, double>, std::map<std::pair<double, double>, double> > output_graph;
 std::vector<road> map_roads;
-    
-void simplify_node(std::pair<osmium::Location, std::map<osmium::Location, double> > start_node){
+ 
+/*   
+void simplify_node(std::pair<osmium::Location, std::map<osmium::Location, double> > start_node){//needs updating
 	std::vector<std::pair<osmium::Location, double> > end_nodes;  
 	for(auto end_node : start_node.second){
 		end_nodes.push_back(end_node);
@@ -39,7 +40,7 @@ void simplify_node(std::pair<osmium::Location, std::map<osmium::Location, double
 		//simplify_node(std::make_pair(end_nodes[1].first, road_graph[end_nodes[1].first]));
 	}
 }
-    
+*/  
     
 
 class MyHandler : public osmium::handler::Handler {
@@ -60,9 +61,13 @@ public:
 		    		osmium::NodeRef& node0 = road[i];
 		    		osmium::NodeRef& node1 = road[i+1];
 		    		//std::cout << "\t" << node0.ref() << ": " << node0.lon() << ", " << node0.lat() << '\n';
+		    		std::pair<double, double> loc0 = std::make_pair(vincety_distance(node0.lat(), node0.lon(), 0, node0.lon()), vincety_distance(node0.lat(), node0.lon(), node0.lat(), 0));
+		    		std::pair<double, double> loc1 = std::make_pair(vincety_distance(node1.lat(), node1.lon(), 0, node1.lon()), vincety_distance(node1.lat(), node1.lon(), node1.lat(), 0));
 					
-					road_graph[node0.location()][node1.location()] = vincety_distance(node0.lon(), node0.lat(), node1.lon(), node1.lat());
-					road_graph[node1.location()][node0.location()] = vincety_distance(node0.lon(), node0.lat(), node1.lon(), node1.lat());
+					map_roads.push_back(std::make_pair(loc0, loc1));
+					
+					output_graph[loc0][loc1] = vincety_distance(node0.lat(), node0.lon(), node1.lat(), node1.lon());
+					output_graph[loc1][loc0] = vincety_distance(node0.lat(), node0.lon(), node1.lat(), node1.lon());
 				}
 		    }
 		}
@@ -70,7 +75,7 @@ public:
 };
 
 
-std::map<std::pair<double, double>, std::map<std::pair<double, double>, double> > get_map_graph() {
+void calculate_map_graph_and_roads() {
     std::string input_file = "estonia-latest.osm.pbf";
     
     
@@ -92,35 +97,10 @@ std::map<std::pair<double, double>, std::map<std::pair<double, double>, double> 
     	simplify_node(start_node);
     }*/
     
-    
-    /*
-	int counter = 0;
-	
-	for(auto start_node : road_graph){
-		std::cout << start_node.first << "\n";
-		counter++;
-		for(auto end_node : start_node.second){
-			std::cout << "\t" << end_node.first << " - " << end_node.second << "\n";
-		}
-	}
-	std::cout << counter << "\n";
-	*/
-	std::map<std::pair<double, double>, std::map<std::pair<double, double>, double> > output_graph;
-	
-	for(auto start_node : road_graph){
-		//std::cout << start_node.first << "\n";
-		osmium::Location start_location = start_node.first;
-		std::pair<double, double> start_location_o = std::make_pair(start_location.lat(), start_location.lon());
-		for(auto end_node : start_node.second){
-			//std::cout << "\t" << end_node.first << " - " << end_node.second << "\n";
-			osmium::Location end_location = end_node.first;
-			std::pair<double, double> end_location_o = std::make_pair(end_location.lat(), end_location.lon());
-			output_graph[start_location_o][end_location_o] = end_node.second;
-		}
-	}
 	/*
 	int counter = 0;
 	
+	std::cout << std::fixed << std::setprecision(0);
 	for(auto start_node : output_graph){
 		std::cout << start_node.first.first << " , " << start_node.first.second << "\n";
 		counter++;
@@ -130,5 +110,8 @@ std::map<std::pair<double, double>, std::map<std::pair<double, double>, double> 
 	}
 	std::cout << counter << "\n";
 	*/
-	return output_graph;
 }
+
+std::map<std::pair<double, double>, std::map<std::pair<double, double>, double> > get_map_graph() {return output_graph;}
+std::vector<road> get_map_roads() {return map_roads;}
+
