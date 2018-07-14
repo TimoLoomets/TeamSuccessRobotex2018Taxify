@@ -91,7 +91,7 @@ double Vincenty_Distance( const double& latitude_01, const double& longitude_01,
 /**
  * @brief Main Function
  */
-double vincety_distance(double latitude_01, double longitude_01, double latitude_02, double longitude_02)
+double vincenty_distance(double latitude_01, double longitude_01, double latitude_02, double longitude_02)
 {
 
     // Set our coordinates
