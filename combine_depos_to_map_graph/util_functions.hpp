@@ -5,7 +5,8 @@
 
 #include "haversine.cpp"
 #include "vincenty.cpp"
-#include "qtree.cpp"
+#include "intersect_check.cpp"
+#include "qtree_2.cpp"
 #include "data_types.h"
 
 
@@ -14,6 +15,8 @@ double vincenty_distance(double latitude_01, double longitude_01, double latitud
 
 void populate(std::vector<road> inputs, double upper_x, double upper_y, double width, int iterations_left, int node);
 std::vector<road> relevant_roads(double x, double y, double current_x, double current_y, double width, int node, int iterations_left);
+
+bool do_intersect(road road1, road road2);
 
 #endif
 

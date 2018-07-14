@@ -61,13 +61,13 @@ public:
 		    		osmium::NodeRef& node0 = road[i];
 		    		osmium::NodeRef& node1 = road[i+1];
 		    		//std::cout << "\t" << node0.ref() << ": " << node0.lon() << ", " << node0.lat() << '\n';
-		    		std::pair<double, double> loc0 = std::make_pair(vincety_distance(node0.lat(), node0.lon(), 0, node0.lon()), vincety_distance(node0.lat(), node0.lon(), node0.lat(), 0));
-		    		std::pair<double, double> loc1 = std::make_pair(vincety_distance(node1.lat(), node1.lon(), 0, node1.lon()), vincety_distance(node1.lat(), node1.lon(), node1.lat(), 0));
+		    		std::pair<double, double> loc0 = std::make_pair(vincenty_distance(node0.lat(), node0.lon(), 0, node0.lon()), vincenty_distance(node0.lat(), node0.lon(), node0.lat(), 0));
+		    		std::pair<double, double> loc1 = std::make_pair(vincenty_distance(node1.lat(), node1.lon(), 0, node1.lon()), vincenty_distance(node1.lat(), node1.lon(), node1.lat(), 0));
 					
 					map_roads.push_back(std::make_pair(loc0, loc1));
 					
-					output_graph[loc0][loc1] = vincety_distance(node0.lat(), node0.lon(), node1.lat(), node1.lon());
-					output_graph[loc1][loc0] = vincety_distance(node0.lat(), node0.lon(), node1.lat(), node1.lon());
+					output_graph[loc0][loc1] = vincenty_distance(node0.lat(), node0.lon(), node1.lat(), node1.lon());
+					output_graph[loc1][loc0] = vincenty_distance(node0.lat(), node0.lon(), node1.lat(), node1.lon());
 				}
 		    }
 		}
