@@ -5,7 +5,7 @@
 using namespace std;
 
 
-const int square_amount = 100; // Change this to be the amount of squares at the lowest level (must be divisible by four)
+const int square_amount = 1024; // Change this to be the amount of squares at the lowest level (must be divisible by four)
 
 
 const int northwest = 0;
