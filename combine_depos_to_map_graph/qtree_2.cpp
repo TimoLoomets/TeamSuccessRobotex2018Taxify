@@ -122,20 +122,26 @@ void populate(vector<road> inputs, double upper_x, double upper_y, double width,
 
 vector<road> relevant_roads(double x, double y, double current_x, double current_y, double width, int node, int iterations_left){
 	cout << "iterations_left: " << iterations_left << " roads: " << tree[node].size() << "\n";
-  if(iterations_left == 0) return tree[node];
-  else{
-    if(current_x - (width / 2) > x){
-      if(current_y - (width / 2) > y){
-        return relevant_roads(x, y, current_x - (width / 2), 	current_y - (width / 2), 	width/2, child(node, southwest), iterations_left-1);
-      }else{
-        return relevant_roads(x, y, current_x - (width / 2), 	current_y, 					width/2, child(node, northwest), iterations_left-1);
-      }
-    }else{
-      if(current_y - (width / 2) > y){
-        return relevant_roads(x, y, current_x, 					current_y - (width / 2), 	width/2, child(node, southeast), iterations_left-1);
-      }else{
-        return relevant_roads(x, y, current_x, 					current_y, 					width/2, child(node, northeast), iterations_left-1);
-      }
-    }
-  }
+	pair <double, double> upper_right = make_pair(current_y, current_x);
+	pair <double, double> upper_left = make_pair(current_y, current_x - width);
+	pair <double, double> lower_right = make_pair(current_y - width, current_x);
+	
+	cout << "upper length: " << vincenty_distance(current_y, current_x, current_y, current_x - width) << "\n";
+	cout << "side length: " << vincenty_distance(current_y, current_x, current_y - width, current_x) << "\n";
+  	if(iterations_left == 0) return tree[node];
+  	else{
+    	if(current_x - (width / 2) > x){
+      		if(current_y - (width / 2) > y){
+        		return relevant_roads(x, y, current_x - (width / 2), 	current_y - (width / 2), 	width/2, child(node, southwest), iterations_left-1);
+      		}else{
+        		return relevant_roads(x, y, current_x - (width / 2), 	current_y, 					width/2, child(node, northwest), iterations_left-1);
+			}
+    	}else{
+      		if(current_y - (width / 2) > y){
+        		return relevant_roads(x, y, current_x, 					current_y - (width / 2), 	width/2, child(node, southeast), iterations_left-1);
+      		}else{
+        		return relevant_roads(x, y, current_x, 					current_y, 					width/2, child(node, northeast), iterations_left-1);
+      		}
+    	}
+  	}
 }

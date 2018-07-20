@@ -21,8 +21,8 @@ int main(){
 	double x = 24.700312614;
 	double y = 59.429101562;
 	std::cout << "total roads: " << map_roads.size() << "\n";
-	populate(map_roads, 							Tallinn_E, Tallinn_N, std::max(Tallinn_N - Tallinn_S, Tallinn_E - Tallinn_W), 0, 12);
-	vector<road> my_roads = relevant_roads(x, y, 	Tallinn_E, Tallinn_N, std::max(Tallinn_N - Tallinn_S, Tallinn_E - Tallinn_W), 0, 12);
+	populate(map_roads, 							Tallinn_E, Tallinn_N, std::max(Tallinn_N - Tallinn_S, Tallinn_E - Tallinn_W), 0, 15);
+	vector<road> my_roads = relevant_roads(x, y, 	Tallinn_E, Tallinn_N, std::max(Tallinn_N - Tallinn_S, Tallinn_E - Tallinn_W), 0, 15);
 	
 	std::cout << my_roads.size() << "\n";
 	/*for(auto road : my_roads){
