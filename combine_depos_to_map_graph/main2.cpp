@@ -57,17 +57,21 @@ int main(){
 		std::cout << "depo: " << depo.depo_lat << " , " << depo.depo_lng << "\n";
 	}
 	
-	vector<std::pair<double, double> > map_nodes;
+	std::set<std::pair<double, double> > map_nodes;
 	for(std::map<std::pair<double, double>, std::map<std::pair<double, double>, double> >::iterator it = map_graph.begin(); it != map_graph.end(); ++it) {
-		map_nodes.push_back(it->first);
+		map_nodes.insert(it->first);
 	}
+	//std::sort(map_nodes.begin(), map_nodes.end());
 	
 	double x = 24.700312614;
 	double y = 59.429101562;
 	populate(map_nodes, 							Tallinn_E, Tallinn_N, std::max(Tallinn_N - Tallinn_S, Tallinn_E - Tallinn_W), 0, 10);
-	vector<std::pair<double, double> > my_nodes = relevant_points(x, y, 	Tallinn_E, Tallinn_N, std::max(Tallinn_N - Tallinn_S, Tallinn_E - Tallinn_W), 0, 10);
+	std::set<std::pair<double, double> > my_nodes = relevant_points_around(x, y, 	Tallinn_E, Tallinn_N, std::max(Tallinn_N - Tallinn_S, Tallinn_E - Tallinn_W), 0, 10);
 	
-	for(auto cur: my_nodes){
+	std::cout << "total nodes: " << map_nodes.size() << "\n";
+	std::cout << "my nodes: " << my_nodes.size() << "\n";
+	
+	for(auto cur : my_nodes){
 		std::cout << "node: " << cur.first << " , " << cur.second << "\n";
 	}
 }
