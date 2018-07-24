@@ -7,6 +7,8 @@
 #define Tallinn_N 59.544064638
 #define Tallinn_W 24.275665283
 #define Tallinn_E 25.190277100
+
+int used_depth = 9;
 //1428921 - 1365523 = 63398
 //6603278 - 6570020 = 33258
 
@@ -49,13 +51,15 @@ int main(){
 	*/
 	//std::cout << vincenty_distance(std::make_pair(Tallinn_S, Tallinn_W), std::make_pair(Tallinn_N, Tallinn_E)) << "\n";
 	
-	vector<depos_data> depos = get_depos_coordinates();
 	
-	std::cout << "depos: " << depos.size() << "\n";
 	
-	for(auto depo : depos){
+	//std::cout << "depos: " << depos.size() << "\n";
+	
+	/*for(auto depo : depos){
 		std::cout << "depo: " << depo.lat << " , " << depo.lon << "\n";
-	}
+	}*/
+	
+	vector<depos_data> depos = get_depos_coordinates();
 	
 	std::map<std::pair<double, double>, std::map<std::pair<double, double>, double> > map_graph = get_map_graph_doubles();
 	
@@ -67,13 +71,20 @@ int main(){
 	
 	double x = 24.700312614;
 	double y = 59.429101562;
-	populate(map_nodes, 							Tallinn_E, Tallinn_N, std::max(Tallinn_N - Tallinn_S, Tallinn_E - Tallinn_W), 0, 10);
-	std::set<std::pair<double, double> > my_nodes = relevant_points_around(x, y, 	Tallinn_E, Tallinn_N, std::max(Tallinn_N - Tallinn_S, Tallinn_E - Tallinn_W), 0, 10);
+	populate(map_nodes, 							Tallinn_E, Tallinn_N, std::max(Tallinn_N - Tallinn_S, Tallinn_E - Tallinn_W), 0, used_depth);
 	
-	std::cout << "total nodes: " << map_nodes.size() << "\n";
-	std::cout << "my nodes: " << my_nodes.size() << "\n";
-	
-	for(auto cur : my_nodes){
-		std::cout << "node: " << cur.first << " , " << cur.second << "\n";
+	for(vector<depos_data>::iterator depo_it = depos.begin(); depo_it < depos.end(); depo_it++){
+		std::cout << "depo: " << (*depo_it).lat << " , " << (*depo_it).lon << "\n";
+		std::pair<double, double> depo_location = std::make_pair((*depo_it).lat, (*depo_it).lon);
+		std::set<std::pair<double, double> > my_nodes = relevant_points_around(	(*depo_it).lon, (*depo_it).lat, 	
+																				Tallinn_E, 		Tallinn_N, 
+																				std::max(Tallinn_N - Tallinn_S, Tallinn_E - Tallinn_W), 0, used_depth);
+		
+		std::cout << "nodes: " << my_nodes.size() << "\n";
+		for(auto cur : my_nodes){
+			double distance = vincenty_distance(cur, depo_location);
+			if(distance > 50)my_nodes.erase(cur);
+		}
+		std::cout << "nodes: " << my_nodes.size() << "\n";
 	}
 }

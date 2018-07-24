@@ -10,6 +10,7 @@ class depos_data
 public:
 	double lat;
 	double lon;
+	std::set<std::pair<double, double> > nodes;
 };
 
 #endif

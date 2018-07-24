@@ -68,11 +68,15 @@ void populate(std::set<pair<double, double > > inputs, double upper_x, double up
 
 std::set<pair<double, double > > relevant_points(double x, double y, double current_x, double current_y, double width, int node, int iterations_left){
 	//cout << "iterations_left: " << iterations_left << " roads: " << tree[node].size() << "\n";
-	//pair <double, double> upper_right = make_pair(current_y, current_x);
+	pair <double, double> upper_right = make_pair(current_y, current_x);
 	pair <double, double> upper_left = make_pair(current_y, current_x - width);
 	pair <double, double> lower_right = make_pair(current_y - width, current_x);
+	pair <double, double> lower_left = make_pair(current_y - width, current_x - width);
 	//cout << "bbox: " << upper_left.first << " , " << upper_left.second << " - " << lower_right.first << " , " << lower_right.second << "\n";
-	
+	/*std::cout 	<< "iterations left: " <<  iterations_left 	<< " lengths: " 
+				<< vincenty_distance(upper_right, upper_left) 	<< " , " 
+				<< vincenty_distance(upper_right, lower_right) 	<< " , " 
+				<< vincenty_distance(lower_right, lower_left) 	<< "\n";*/
   	if(tree[node].size() != 0 && iterations_left > 0){
   		if(current_x - (width / 2) > x){
       		if(current_y - (width / 2) > y){
