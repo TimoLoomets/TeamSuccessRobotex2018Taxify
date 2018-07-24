@@ -6,9 +6,9 @@ using namespace std;
 
 vector <depos_data> get_depos_coordinates() {
 
-	vector <depos_data> depos_cordinates;
-	depos_data cordinates;
-	int lines = 31; 
+	vector <depos_data> depos_coordinates;
+	depos_data coordinates;
+	int lines = 30; 
 
 	string sissetulev_rida;
 	string depos_lat_string;
@@ -29,11 +29,11 @@ vector <depos_data> get_depos_coordinates() {
 		
 		depos_lng_string = sissetulev_rida;
 		
-		cordinates.depo_lat = stold(depos_lat_string);
-		cordinates.depo_lng = stold(depos_lng_string);
+		coordinates.lat = stold(depos_lat_string);
+		coordinates.lon = stold(depos_lng_string);
 		
 		//cout << "rida : " << i << "			" << depos_lat_string << "    " << depos_lng_string << endl;
-		depos_cordinates.push_back(cordinates);
+		depos_coordinates.push_back(coordinates);
 	}
-	return depos_cordinates;
+	return depos_coordinates;
 }

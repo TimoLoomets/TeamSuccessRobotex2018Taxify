@@ -49,13 +49,15 @@ int main(){
 	*/
 	//std::cout << vincenty_distance(std::make_pair(Tallinn_S, Tallinn_W), std::make_pair(Tallinn_N, Tallinn_E)) << "\n";
 	
-	
-	std::map<std::pair<double, double>, std::map<std::pair<double, double>, double> > map_graph = get_map_graph_doubles();
 	vector<depos_data> depos = get_depos_coordinates();
 	
+	std::cout << "depos: " << depos.size() << "\n";
+	
 	for(auto depo : depos){
-		std::cout << "depo: " << depo.depo_lat << " , " << depo.depo_lng << "\n";
+		std::cout << "depo: " << depo.lat << " , " << depo.lon << "\n";
 	}
+	
+	std::map<std::pair<double, double>, std::map<std::pair<double, double>, double> > map_graph = get_map_graph_doubles();
 	
 	std::set<std::pair<double, double> > map_nodes;
 	for(std::map<std::pair<double, double>, std::map<std::pair<double, double>, double> >::iterator it = map_graph.begin(); it != map_graph.end(); ++it) {
