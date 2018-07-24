@@ -17,6 +17,7 @@
 #define Tallinn_W 24.275665283
 #define Tallinn_E 25.190277100
 
+std::map<std::pair<double, double>, std::map<std::pair<double, double>, double> > output_graph_doubles;
 std::map<osmium::Location, std::map<osmium::Location, double> > output_graph;
 std::vector<road> map_roads;
   
@@ -66,6 +67,9 @@ public:
 					
 					output_graph[node0.location()][node1.location()] = vincenty_distance(node0.lon(), node0.lat(), node1.lon(), node1.lat());
 					output_graph[node1.location()][node0.location()] = vincenty_distance(node0.lon(), node0.lat(), node1.lon(), node1.lat());
+					
+					output_graph_doubles[std::make_pair(node0.lat(), node0.lon())][std::make_pair(node1.lat(), node1.lon())] = vincenty_distance(node0.lon(), node0.lat(), node1.lon(), node1.lat());
+					output_graph_doubles[std::make_pair(node1.lat(), node1.lon())][std::make_pair(node0.lat(), node0.lon())] = vincenty_distance(node0.lon(), node0.lat(), node1.lon(), node1.lat());
 				}
 		    }
 		}
@@ -113,3 +117,5 @@ void calculate_map_graph_and_roads(){
 
 std::map<osmium::Location, std::map<osmium::Location, double> > get_map_graph() {return output_graph;}
 std::vector<road> get_map_roads() {return map_roads;}
+std::map<std::pair<double, double>, std::map<std::pair<double, double>, double> > get_map_graph_doubles() {return output_graph_doubles;}
+

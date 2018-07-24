@@ -1,7 +1,7 @@
 // C++ Standard Libraries
 #include <cmath>
 #include <iostream>
-
+#include "data_types.h"
 
 //#include "haversine.cpp"
 /**
@@ -114,5 +114,62 @@ double vincenty_distance(double latitude_01, double longitude_01, double latitud
     //std::cout << std::fixed << "Vincety distance: " << distance << std::endl;
 	//std::cout << "Haversine distance: " << haversine_distance(latitude_01, longitude_01, latitude_02, longitude_02) << std::endl;
     // Exit
+    return distance;
+}
+
+double vincenty_distance(std::pair<double, double> point1, std::pair<double, double> point2)
+{
+
+	double latitude_01 = point1.first;
+	double longitude_01 = point1.second;
+	double latitude_02 = point2.first;
+	double longitude_02 = point2.second;
+	
+    // Set our coordinates
+    latitude_01  = latitude_01 * M_PI / 180.0;
+    longitude_01 = longitude_01 * M_PI / 180.0;
+
+    latitude_02 =  latitude_02 * M_PI / 180.0;
+    longitude_02 = longitude_02 * M_PI / 180.0;
+
+    // Set the datum components
+    const double a = 6378137.0;
+    const double b = 6356752.314245;
+
+    // Vincenty Distance
+    double distance = Vincenty_Distance( latitude_01, longitude_01,
+                                         latitude_02, longitude_02,
+                                         a, b);
+
+    return distance;
+}
+
+double vincenty_distance(road my_road)
+{
+
+	std::pair<double, double> point1 = my_road.first;
+	std::pair<double, double> point2 = my_road.second;
+
+	double latitude_01 = point1.first;
+	double longitude_01 = point1.second;
+	double latitude_02 = point2.first;
+	double longitude_02 = point2.second;
+	
+    // Set our coordinates
+    latitude_01  = latitude_01 * M_PI / 180.0;
+    longitude_01 = longitude_01 * M_PI / 180.0;
+
+    latitude_02 =  latitude_02 * M_PI / 180.0;
+    longitude_02 = longitude_02 * M_PI / 180.0;
+
+    // Set the datum components
+    const double a = 6378137.0;
+    const double b = 6356752.314245;
+
+    // Vincenty Distance
+    double distance = Vincenty_Distance( latitude_01, longitude_01,
+                                         latitude_02, longitude_02,
+                                         a, b);
+
     return distance;
 }
