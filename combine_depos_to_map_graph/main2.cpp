@@ -14,7 +14,7 @@ int used_depth = 9;
 
 int main(){
 	calculate_map_graph_and_roads();
-	std::vector<road> map_roads = get_map_roads();
+	std::set<road> map_roads = get_map_roads();
 	
 	std::cout << std::fixed;// << std::setprecision(0);
 	//std::cout << "WN" << vincety_distance(Tallinn_N, Tallinn_W, Tallinn_N, 0) << "\n";
@@ -69,22 +69,46 @@ int main(){
 	}
 	//std::sort(map_nodes.begin(), map_nodes.end());
 	
-	double x = 24.700312614;
-	double y = 59.429101562;
-	populate(map_nodes, 							Tallinn_E, Tallinn_N, std::max(Tallinn_N - Tallinn_S, Tallinn_E - Tallinn_W), 0, used_depth);
+	//double x = 24.700312614;
+	//double y = 59.429101562;
+	populate(map_roads, 							Tallinn_E, Tallinn_N, std::max(Tallinn_N - Tallinn_S, Tallinn_E - Tallinn_W), 0, used_depth);
 	
+	kml_start();
 	for(vector<depos_data>::iterator depo_it = depos.begin(); depo_it < depos.end(); depo_it++){
 		std::cout << "depo: " << (*depo_it).lat << " , " << (*depo_it).lon << "\n";
 		std::pair<double, double> depo_location = std::make_pair((*depo_it).lat, (*depo_it).lon);
-		std::set<std::pair<double, double> > my_nodes = relevant_points_around(	(*depo_it).lon, (*depo_it).lat, 	
-																				Tallinn_E, 		Tallinn_N, 
-																				std::max(Tallinn_N - Tallinn_S, Tallinn_E - Tallinn_W), 0, used_depth);
+		kml_point(depo_location);
+		std::set<road> my_roads = relevant_roads_around((*depo_it).lon, (*depo_it).lat, 	
+														Tallinn_E, 		Tallinn_N, 
+														std::max(Tallinn_N - Tallinn_S, Tallinn_E - Tallinn_W), 0, used_depth);
 		
-		std::cout << "nodes: " << my_nodes.size() << "\n";
-		for(auto cur : my_nodes){
-			double distance = vincenty_distance(cur, depo_location);
-			if(distance > 50)my_nodes.erase(cur);
+		std::cout << "roads: " << my_roads.size() << "\n";
+		for(auto current_road : my_roads){
+			std::set<std::pair<double, double> > road_intersections = geodesic_intersections(depo_location, current_road);
+			for(auto current_intersection : road_intersections){
+				kml_point(current_intersection);
+				std::cout << current_intersection.first << " , " << current_intersection.second << "\n";
+			}
 		}
-		std::cout << "nodes: " << my_nodes.size() << "\n";
 	}
+	kml_end();
+	/*kml_start();
+	std::pair<double, double> test_depo = std::make_pair(59.419017, 24.812673);
+	std::set<road> my_roads = relevant_roads_around(test_depo.second, test_depo.first, 	
+														Tallinn_E, 		Tallinn_N, 
+														std::max(Tallinn_N - Tallinn_S, Tallinn_E - Tallinn_W), 0, used_depth);
+	std::cout << "total roads: " << my_roads.size() << "\n";
+	int road_counter = 0;
+	kml_point(test_depo);
+	for(auto current_road : my_roads){
+		std::cout << "road " << road_counter << " : " 	<< current_road.first.first << " , " << current_road.first.second << " - " 
+														<< current_road.second.first << " , " << current_road.second.second << "\n";
+		kml_road(current_road);
+		std::set<std::pair<double, double> > road_intersections = geodesic_intersections(test_depo, current_road);
+		for(auto current_intersection : road_intersections){
+			std::cout << "intersection: " << current_intersection.first << " , " << current_intersection.second << "\n";
+		}
+		road_counter++;
+	}
+	kml_end();*/
 }

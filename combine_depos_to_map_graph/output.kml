@@ -1,0 +1,2290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+	<Document>
+		<Placemark>
+			<Point>
+				<coordinates>24.7041, 59.4401, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7046, 59.4395, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7045, 59.4395, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7046, 59.4396, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7036, 59.4397, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7037, 59.4396, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7037, 59.4396, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7041, 59.4396, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.704, 59.4396, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7046, 59.4395, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7049, 59.4397, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7045, 59.4396, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7047, 59.4396, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.705, 59.4399, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7033, 59.4401, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7043, 59.4398, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7046, 59.4398, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7048, 59.4397, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7034, 59.4399, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7035, 59.4397, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7029, 59.4401, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7035, 59.4397, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7032, 59.4403, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7046, 59.4398, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7039, 59.4406, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.704, 59.4402, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7038, 59.4406, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7037, 59.4404, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7046, 59.4405, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6415, 59.3729, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6409, 59.3725, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6423, 59.3729, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.9009, 59.4947, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.901, 59.4944, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.9008, 59.4952, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.901, 59.4944, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.9017, 59.4951, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.9013, 59.4946, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.9017, 59.4952, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.718, 59.4342, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7183, 59.4337, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7186, 59.434, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7185, 59.4337, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7186, 59.4341, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8266, 59.4945, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8273, 59.4941, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8274, 59.4942, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8271, 59.494, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8273, 59.494, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.827, 59.494, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8272, 59.494, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8272, 59.4941, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8274, 59.4941, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.827, 59.4941, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8271, 59.4941, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8271, 59.4942, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8272, 59.4942, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.827, 59.4941, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8269, 59.495, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8272, 59.4943, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8271, 59.495, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8269, 59.4943, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.827, 59.4951, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8271, 59.4944, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8272, 59.495, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.827, 59.4945, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.827, 59.4951, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.827, 59.4948, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.827, 59.495, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7984, 59.4187, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.798, 59.4181, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.798, 59.4181, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7983, 59.418, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7976, 59.4184, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.798, 59.4181, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.798, 59.4181, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7975, 59.4184, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7983, 59.4181, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7975, 59.4185, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.798, 59.4183, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.798, 59.4191, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.798, 59.4181, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7973, 59.4185, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7984, 59.4182, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7984, 59.4182, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.798, 59.4183, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7972, 59.4187, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7982, 59.4183, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7974, 59.4186, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7976, 59.4186, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7974, 59.4187, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7982, 59.4183, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.798, 59.4183, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7978, 59.4185, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7989, 59.4191, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7984, 59.4182, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7984, 59.4191, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7984, 59.4184, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7988, 59.4192, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7979, 59.4186, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7974, 59.4189, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7991, 59.4189, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7992, 59.4189, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7989, 59.4189, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7991, 59.4189, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7988, 59.4189, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7991, 59.419, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7985, 59.4185, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7989, 59.4192, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8639, 59.4406, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8633, 59.4407, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.863, 59.4408, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8636, 59.4407, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8632, 59.4409, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8634, 59.4409, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8643, 59.441, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.864, 59.4408, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8644, 59.441, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8633, 59.4407, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8632, 59.4411, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8636, 59.4407, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8635, 59.4412, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.864, 59.4408, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8638, 59.4412, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.762, 59.4366, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7619, 59.4361, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7626, 59.4364, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7624, 59.436, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7627, 59.4366, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7626, 59.4362, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7628, 59.4368, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7732, 59.4293, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7737, 59.4295, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.773, 59.4298, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7734, 59.4292, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7739, 59.4293, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7739, 59.4293, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7727, 59.4298, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7738, 59.4294, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7728, 59.4298, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6816, 59.4024, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8408, 59.4397, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8413, 59.4391, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8415, 59.4392, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8404, 59.4391, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8405, 59.4391, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8413, 59.4391, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8418, 59.4395, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8412, 59.4392, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8415, 59.4392, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8402, 59.4392, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8415, 59.4395, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8404, 59.4392, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8397, 59.4395, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8412, 59.4392, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8419, 59.4397, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8404, 59.4392, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8397, 59.4394, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8405, 59.4392, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8397, 59.4395, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8406, 59.4392, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8397, 59.4396, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8407, 59.4392, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8398, 59.4396, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8401, 59.4399, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8414, 59.44, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8407, 59.4392, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8398, 59.4396, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8399, 59.4395, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8416, 59.4398, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.841, 59.4392, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8414, 59.4393, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8399, 59.4395, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8416, 59.4398, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.841, 59.4392, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8419, 59.4398, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8405, 59.4393, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8397, 59.4397, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.841, 59.4393, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8414, 59.4393, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.841, 59.4393, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8418, 59.4398, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8411, 59.4393, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8419, 59.4397, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8411, 59.4393, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8419, 59.4398, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8407, 59.4394, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8399, 59.4397, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.84, 59.4396, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8415, 59.44, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.841, 59.4395, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8417, 59.44, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8413, 59.4396, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8418, 59.4399, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8888, 59.4523, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8897, 59.4523, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8879, 59.4524, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6895, 59.4101, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6887, 59.4098, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6884, 59.4098, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6895, 59.4096, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6886, 59.4099, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6902, 59.4098, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6905, 59.4099, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6902, 59.4098, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6907, 59.41, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6903, 59.4101, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6886, 59.4101, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6901, 59.4101, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6892, 59.4106, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8059, 59.4394, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8053, 59.439, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8049, 59.4391, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8052, 59.4392, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8048, 59.4393, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8053, 59.4391, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8048, 59.4392, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8054, 59.439, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8049, 59.4391, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8054, 59.439, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.805, 59.4396, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8053, 59.4391, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8048, 59.4396, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8053, 59.4394, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8064, 59.4399, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8053, 59.4395, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8062, 59.4399, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8059, 59.4395, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8062, 59.4399, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8059, 59.4395, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8055, 59.44, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8058, 59.4397, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8057, 59.44, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6622, 59.3972, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6623, 59.3968, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6632, 59.3973, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6623, 59.3968, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6623, 59.3977, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6623, 59.3971, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.663, 59.3974, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6619, 59.3976, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6619, 59.3976, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6623, 59.3971, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6623, 59.3978, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.662, 59.3976, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6623, 59.3976, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6173, 59.348, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6176, 59.3476, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6184, 59.348, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6173, 59.3476, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6182, 59.348, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6181, 59.3481, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6164, 59.3481, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8834, 59.4796, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8837, 59.479, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8838, 59.479, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8828, 59.4792, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8841, 59.4794, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8837, 59.4792, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8833, 59.4801, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.9213, 59.4767, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.9219, 59.4762, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.9221, 59.4767, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.9221, 59.4765, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.9224, 59.4766, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.9216, 59.4761, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.922, 59.4769, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.9218, 59.4764, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.9225, 59.4765, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.9216, 59.4764, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.9223, 59.4766, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.9208, 59.4763, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.9218, 59.4771, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.9215, 59.4764, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.9222, 59.4766, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.921, 59.4767, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.9207, 59.4767, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.9221, 59.4767, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.9207, 59.4771, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.921, 59.4767, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.9205, 59.4771, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.9216, 59.4764, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.9222, 59.4771, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7873, 59.4405, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7875, 59.4399, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7872, 59.4399, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7872, 59.4398, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7875, 59.4399, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7875, 59.4399, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7878, 59.4402, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7872, 59.4398, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7875, 59.4399, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7876, 59.4399, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7867, 59.4405, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7877, 59.4399, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7882, 59.4403, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7871, 59.4399, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7866, 59.4405, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7879, 59.44, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7883, 59.4404, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.787, 59.4399, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7863, 59.4404, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7869, 59.4399, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7865, 59.4406, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7878, 59.44, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7881, 59.44, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7877, 59.44, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7881, 59.44, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7877, 59.44, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.788, 59.44, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7876, 59.4401, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.788, 59.4401, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7225, 59.409, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7219, 59.4091, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7223, 59.4096, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.722, 59.4088, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7214, 59.4093, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7217, 59.4091, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7216, 59.4093, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7025, 59.4256, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7023, 59.425, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7021, 59.425, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7024, 59.425, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.702, 59.4251, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7032, 59.4253, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7017, 59.4256, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7024, 59.425, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7017, 59.4256, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.5577, 59.4331, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.5582, 59.4327, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.5571, 59.4333, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7928, 59.399, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.792, 59.3988, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7936, 59.3991, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7921, 59.3986, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.792, 59.3989, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7257, 59.426, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7254, 59.4255, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7262, 59.4257, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.725, 59.4256, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7265, 59.4259, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7258, 59.4254, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7261, 59.4255, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7265, 59.4258, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7266, 59.4258, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.726, 59.4256, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7254, 59.4264, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7259, 59.4254, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7266, 59.4259, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7262, 59.4263, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.7262, 59.4264, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6391, 59.3977, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6389, 59.3972, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6388, 59.3972, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6397, 59.3974, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6397, 59.3974, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6397, 59.3974, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6398, 59.3974, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6397, 59.3973, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6397, 59.3973, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6397, 59.3973, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6397, 59.3973, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6397, 59.3974, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6397, 59.398, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6397, 59.3975, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6398, 59.3975, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6388, 59.3975, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6381, 59.3977, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6388, 59.3975, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6385, 59.3982, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6388, 59.3977, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6382, 59.3978, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6388, 59.3976, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6385, 59.3983, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6388, 59.3978, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6383, 59.398, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6386, 59.398, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6394, 59.3982, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6396, 59.3979, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6393, 59.3983, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6384, 59.3979, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6396, 59.3982, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6394, 59.3981, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6395, 59.3982, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6135, 59.3586, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6131, 59.358, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6127, 59.3581, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6129, 59.3582, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.614, 59.359, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6139, 59.3588, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6142, 59.3588, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6139, 59.3588, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6141, 59.3591, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.823, 59.4548, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8237, 59.4545, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8238, 59.4549, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8238, 59.4545, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8242, 59.4547, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8238, 59.4545, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8238, 59.455, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8228, 59.4544, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8227, 59.4544, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8239, 59.4547, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8222, 59.4548, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8228, 59.4544, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8219, 59.4548, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6561, 59.417, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6559, 59.4165, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6561, 59.4165, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6559, 59.4165, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6556, 59.4168, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6561, 59.4164, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6563, 59.4165, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6557, 59.4165, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6553, 59.417, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6563, 59.4164, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6569, 59.417, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6561, 59.4164, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6569, 59.4167, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6558, 59.4165, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6552, 59.4166, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6556, 59.4165, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6553, 59.417, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6563, 59.4165, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6556, 59.417, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6558, 59.4165, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6554, 59.4171, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.656, 59.4165, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6552, 59.4167, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6558, 59.4165, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6554, 59.4172, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6555, 59.4167, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6551, 59.4171, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6565, 59.4165, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6556, 59.4172, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6568, 59.4167, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.657, 59.4172, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.656, 59.4165, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6554, 59.4172, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6566, 59.4169, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.657, 59.417, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6556, 59.4167, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6554, 59.4174, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6559, 59.4165, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6555, 59.4173, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6569, 59.4172, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6555, 59.4174, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6554, 59.4171, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6552, 59.4174, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6554, 59.4171, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.6567, 59.4175, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8127, 59.419, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8565, 59.5039, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8563, 59.5034, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8555, 59.5037, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8557, 59.5037, 0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Point>
+				<coordinates>24.8573, 59.5039, 0</coordinates>
+			</Point>
+		</Placemark>
+	</Document>
+</kml>

@@ -173,3 +173,109 @@ double vincenty_distance(road my_road)
 
     return distance;
 }
+
+/*
+*   \brief Ellipsoid Inverse Flattening constant
+*
+*   298.2572235636654651
+*   \remarks WGS84 Ellipsoid constant
+*/
+const double kInverseFlattening = 298.2572235636654651;
+
+/*
+*   \brief Ellipsoid Flattening constant
+*
+*   Approximately 0.00335281
+*   \remarks WGS84 Ellipsoid constant
+*/
+const double kFlattening = 1.0 / kInverseFlattening;
+
+ /*
+*   \brief Ellipsoid Semi Major Axis
+*
+*   6378137.0
+*   \remarks WGS84 Ellipsoid constant
+*/
+const double kSemiMajorAxis = 6378137.0;
+
+/*
+*   \brief Ellipsoid Semi Minor Axis
+*
+*   Approximately 6356752.314245
+*   \remarks WGS84 Ellipsoid constant
+*/
+const double kSemiMinorAxis = kSemiMajorAxis * (1 - kFlattening);
+
+#define M_2PI M_PI * 2.0
+
+/*
+*   \brief Epsilon
+*   \returns double epsilon of 0.5e-15.
+*   \note Order 8260.54A Appendix 2, 3.3 Tolerances, states
+*   "Empirical studies have shown that eps = 0.5e-13 and
+*   tol = 1.0-e9 work well."
+*
+*   When implementing the TerpsTest validation application
+*   eps must be set to 0.5e-15 for all tests to pass. If
+*   set as stated in section 3.3 of 8260.54A then the
+*   Tangent Fixed Radius Arc and Locus Tan Fixed Radius Arc
+*   fails validation.
+*
+*/
+const double kEps = 0.5e-15;
+
+std::pair<double, double> vincenty_location(std::pair<double, double> &pt, double brng, double dist)
+{
+    double s = dist;
+    double alpha1 = brng;
+    double sinAlpha1 = sin(alpha1);
+    double cosAlpha1 = cos(alpha1);
+
+    double tanU1 = (1.0 - kFlattening) * tan(pt.first);
+    double cosU1 = 1.0 / sqrt((1.0 + tanU1 * tanU1));
+    double sinU1 = tanU1 * cosU1;
+    double sigma1 = atan2(tanU1, cosAlpha1);
+    double sinAlpha = cosU1 * sinAlpha1;
+    double cosSqAlpha = 1.0 - sinAlpha * sinAlpha;
+    double uSq = cosSqAlpha * (kSemiMajorAxis * kSemiMajorAxis - kSemiMinorAxis * kSemiMinorAxis) /
+                 (kSemiMinorAxis * kSemiMinorAxis);
+    double A = 1.0 + uSq / 16384.0 * (4096.0 + uSq * (-768.0 + uSq * (320.0 - 175.0 * uSq)));
+    double B = uSq / 1024.0 * (256.0 + uSq * (-128.0 + uSq * (74.0 - 47.0 * uSq)));
+
+    double sigma = s / (kSemiMinorAxis * A);
+    double sigmaP = M_2PI;
+    double sinSigma = sin(sigma);
+    double cosSigma = cos(sigma);
+    double cos2SigmaM = cos(2.0 * sigma1 + sigma);
+    int iterLimit = 0;
+    while (fabs(sigma - sigmaP) > kEps && ++iterLimit < 100)
+    {
+        cos2SigmaM = cos(2.0 * sigma1 + sigma);
+        sinSigma = sin(sigma);
+        cosSigma = cos(sigma);
+        double cos2SigmaSq = cos2SigmaM * cos2SigmaM;
+        double deltaSigma = B * sinSigma * (cos2SigmaM + B * 0.25 * (cosSigma * (-1.0 + 2.0 * cos2SigmaSq) -
+                                                                     B / 6.0 * cos2SigmaM *
+                                                                     (-3.0 + 4.0 * sinSigma * sinSigma) *
+                                                                     (-3.0 + 4.0 * cos2SigmaSq)));
+
+        sigmaP = sigma;
+        sigma = s / (kSemiMinorAxis * A) + deltaSigma;
+    }
+
+    double tmp = sinU1 * sinSigma - cosU1 * cosSigma * cosAlpha1;
+    double lat2 = atan2(sinU1 * cosSigma + cosU1 * sinSigma * cosAlpha1,
+                        (1.0 - kFlattening) * sqrt(sinAlpha * sinAlpha + tmp * tmp));
+    double lambda = atan2(sinSigma * sinAlpha1, cosU1 * cosSigma - sinU1 * sinSigma * cosAlpha1);
+    double C = kFlattening / 16.0 * cosSqAlpha * (4.0 + kFlattening * (4.0 - 3.0 * cosSqAlpha));
+    double L = lambda - (1.0 - C) * kFlattening * sinAlpha *
+                        (sigma +
+                         C * sinSigma * (cos2SigmaM + C * cosSigma * (-1.0 + 2.0 * cos2SigmaM * cos2SigmaM)));
+
+    return std::make_pair(lat2, pt.second + L);
+}
+
+/*std::pair<double, double> vincenty_location_2(std::pair<double, double> &pt, double brng, double dist)
+{
+	
+}*/
