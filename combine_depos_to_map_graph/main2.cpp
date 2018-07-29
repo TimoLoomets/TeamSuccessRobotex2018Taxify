@@ -85,7 +85,12 @@ int main(){
 		std::cout << "roads: " << my_roads.size() << "\n";
 		for(auto current_road : my_roads){
 			std::set<std::pair<double, double> > road_intersections = geodesic_intersections(depo_location, current_road);
+			bool not_kml=true;
 			for(auto current_intersection : road_intersections){
+				if(not_kml){
+					kml_road(current_road);
+					not_kml=false;
+				}
 				kml_point(current_intersection);
 				std::cout << current_intersection.first << " , " << current_intersection.second << "\n";
 			}
