@@ -1,19 +1,6 @@
 
-#include "stdafx.h"
 #include "passenger_info.h" 
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <cmath>
-#include <vector>
-#include <sstream>
-#include <cstdio>
-#include <cstring>
-#include <ctime>
-#include <locale>
-#include <iomanip>
-#include <time.h>
-#include <stdio.h>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -22,60 +9,32 @@ extern passenger_data passenger;
 int lines = 420001; // amount of lines 420001
 
 string sissetulev_rida;
-
 string most_of_data;
-
 string time_of_year;
-
 string epoch_string;
-
 string start_time;
-
 string lane_to_print;
-
 string str_aasta;
-
 string str_kuu;
-
 string str_paev;
-
 string str_tund;
-
 string str_minut;
-
 string str_sekund;
-
 string string_start_lat;
-
 string string_start_lng;
-
 string string_end_lat;
-
 string string_end_lng;
-
 string string_ride_value;
-
 int amount_of_days;
-
 int aasta;
-
 int kuu;
-
 int paev;
-
 int tund;
-
 int minut;
-
 double sekund;
-
 int timezone = 2;
 
-
-
 vector <passenger_data> passengers() {
-
-
 	vector <passenger_data> passengers_return;
 
 	ifstream inFile;
@@ -162,79 +121,35 @@ vector <passenger_data> passengers() {
 					leap_years = leap_years + 1;
 					if (int aasta = 2032) {
 						leap_years = leap_years + 1;
-
 					}
-
-
 				}
-
-
 			}
-
-
 		}
 
-
-
-		if (int kuu = 1) {
-
+		if (kuu == 1) {
 			passenger.epoch_time = sekund + minut * 60 + tund * 3600 + (paev - 1) * 86400 + (aasta - 1971) * 31536000 + leap_years * 86400;
-
-		}
-		else if (int kuu = 2) {
-
+		}else if (kuu == 2) {
 			passenger.epoch_time = sekund + minut * 60 + tund * 3600 + (paev - 1) * 86400 + (aasta - 1971) * 31536000 + leap_years * 86400 + 31 * 86400;
-
-		}
-		else if (int kuu = 3) {
-
+		}else if (kuu == 3) {
 			passenger.epoch_time = sekund + minut * 60 + tund * 3600 + (paev - 1) * 86400 + (aasta - 1971) * 31536000 + leap_years * 86400 + 59 * 86400;
-
-		}
-		else if (int kuu = 4) {
-
+		}else if (kuu == 4) {
 			passenger.epoch_time = sekund + minut * 60 + tund * 3600 + (paev - 1) * 86400 + (aasta - 1971) * 31536000 + leap_years * 86400 + 90 * 86400;
-
-		}
-		else if (int kuu = 5) {
-
+		}else if (kuu == 5) {
 			passenger.epoch_time = sekund + minut * 60 + tund * 3600 + (paev - 1) * 86400 + (aasta - 1971) * 31536000 + leap_years * 86400 + 120 * 86400;
-
-		}
-		else if (int kuu = 6) {
-
+		}else if (kuu == 6) {
 			passenger.epoch_time = sekund + minut * 60 + tund * 3600 + (paev - 1) * 86400 + (aasta - 1971) * 31536000 + leap_years * 86400 + 151 * 86400;
-
-		}
-		else if (int kuu = 7) {
-
+		}else if (kuu == 7) {
 			passenger.epoch_time = sekund + minut * 60 + tund * 3600 + (paev - 1) * 86400 + (aasta - 1971) * 31536000 + leap_years * 86400 + 181 * 86400;
-
-		}
-		else if (int kuu = 8) {
-
+		}else if (kuu == 8) {
 			passenger.epoch_time = sekund + minut * 60 + tund * 3600 + (paev - 1) * 86400 + (aasta - 1971) * 31536000 + leap_years * 86400 + 212 * 86400;
-
-		}
-		else if (int kuu = 9) {
-
+		}else if (kuu == 9) {
 			passenger.epoch_time = sekund + minut * 60 + tund * 3600 + (paev - 1) * 86400 + (aasta - 1971) * 31536000 + leap_years * 86400 + 243 * 86400;
-
-		}
-		else if (int kuu = 10) {
-
+		}else if (kuu == 10) {
 			passenger.epoch_time = sekund + minut * 60 + tund * 3600 + (paev - 1) * 86400 + (aasta - 1971) * 31536000 + leap_years * 86400 + 273 * 86400;
-
-		}
-		else if (int kuu = 11) {
-
+		}else if (kuu == 11) {
 			passenger.epoch_time = sekund + minut * 60 + tund * 3600 + (paev - 1) * 86400 + (aasta - 1971) * 31536000 + leap_years * 86400 + 304 * 86400;
-
-		}
-		else if (int kuu = 12) {
-
+		}else if (kuu == 12) {
 			passenger.epoch_time = sekund + minut * 60 + tund * 3600 + (paev - 1) * 86400 + (aasta - 1971) * 31536000 + leap_years * 86400 + 334 * 86400;
-
 		}
 		passenger.epoch_time = passenger.epoch_time + timezone * 3600;
 
