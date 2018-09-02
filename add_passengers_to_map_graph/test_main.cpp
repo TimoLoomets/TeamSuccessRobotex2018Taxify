@@ -13,10 +13,20 @@ void insert_to_map_pointer(
 			std::pair<double, double> loc1, 
 			std::pair<double, double> loc2, 
 			double val){
+	if(val != 0){
+		if(map_graph_pointer->find(loc1) != map_graph_pointer->end()){
+			map_graph_pointer->find(loc1)->second.insert(std::make_pair(loc2, val)); 
+		}else{
+			map_graph_pointer->insert(std::make_pair(loc1, std::map<std::pair<double, double>, double>{{loc2, val}}));
+		}
+	}
+}
+
+void delete_from_map_pointer(std::map<std::pair<double, double>, std::map<std::pair<double, double>, double> > * map_graph_pointer, 
+			std::pair<double, double> loc1, 
+			std::pair<double, double> loc2){
 	if(map_graph_pointer->find(loc1) != map_graph_pointer->end()){
-		map_graph_pointer->find(loc1)->second.insert(std::make_pair(loc2, val)); 
-	}else{
-		map_graph_pointer->insert(std::make_pair(loc1, std::map<std::pair<double, double>, double>{{loc2, val}}));
+		map_graph_pointer->find(loc1)->second.erase(loc2); 
 	}
 }
 
@@ -77,6 +87,16 @@ std::set<std::pair<double, double> > add_point_to_graph(
 	return output_nodes;
 }
 
+void remove_points_from_graph(
+			std::map<std::pair<double, double>, std::map<std::pair<double, double>, double> > * map_graph_pointer, 
+			std::pair<double, double> point_location, 
+			std::set<std::pair<double, double> > nodes){
+	for(auto current_node : nodes){
+		delete_from_map_pointer(map_graph_pointer, point_location, current_node);
+		delete_from_map_pointer(map_graph_pointer, current_node, point_location);
+	}
+}
+
 int main(){
 	add_depos_to_graph();
 	/*vector<depos_data> my_depos = get_depos_with_connections();
@@ -86,13 +106,21 @@ int main(){
 	std::vector<passenger_data> passengers = get_passengers();
 	std::map<std::pair<double, double>, std::map<std::pair<double, double>, double> > map_graph = get_map_graph_with_depos();
 	
-	for(vector<passenger_data>::iterator passenger_it = passengers.begin(); passenger_it < passengers.end(); ++passenger_it){
-		//std::cout << "passanger start: " << passenger_it->start_lat << " , " << passenger_it->start_lon << "\n";
-		std::cout << passengers.end()-passenger_it << "\n";//258348 
-		passenger_it->start_nodes = add_point_to_graph(&map_graph, std::make_pair(passenger_it->start_lat, passenger_it->start_lon));
-		//std::cout << "passanger end: " << passenger_it->end_lat << " , " << passenger_it->end_lon << "\n";
-		passenger_it->end_nodes = add_point_to_graph(&map_graph, std::make_pair(passenger_it->end_lat, passenger_it->end_lon));
+	std::ofstream graphout;
+	graphout.open("graph.txt");
+	for(auto start_loc : map_graph){
+		for(auto end_loc : start_loc.second){
+			graphout << start_loc.first.first << " " << start_loc.first.second << " " << end_loc.first.first << " " << end_loc.first.second << " " << end_loc.second << "\n";
+		}
 	}
-	
+	/*
+	for(vector<passenger_data>::iterator passenger_it = passengers.begin(); passenger_it < passengers.end(); ++passenger_it){
+		std::cout << passenger_it-passengers.begin() << "\n";
+		passenger_it->start_nodes = add_point_to_graph(&map_graph, std::make_pair(passenger_it->start_lat, passenger_it->start_lon));
+		passenger_it->end_nodes = add_point_to_graph(&map_graph, std::make_pair(passenger_it->end_lat, passenger_it->end_lon));
+		remove_points_from_graph(&map_graph, std::make_pair(passenger_it->start_lat, passenger_it->start_lon), passenger_it->start_nodes);
+		remove_points_from_graph(&map_graph, std::make_pair(passenger_it->end_lat, passenger_it->end_lon), passenger_it->end_nodes);
+	}
+	*/
 	return 0;
 }

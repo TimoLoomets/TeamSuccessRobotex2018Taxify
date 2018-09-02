@@ -12,6 +12,7 @@ double Vincenty_Distance( const double& latitude_01, const double& longitude_01,
                           const double& a,
                           const double& b )
 {
+	if(latitude_01 == latitude_02 && longitude_01 == longitude_02)return 0;
     // Flattening
     const double f = (a-b)/a;
 
@@ -93,7 +94,6 @@ double Vincenty_Distance( const double& latitude_01, const double& longitude_01,
  */
 double vincenty_distance(double latitude_01, double longitude_01, double latitude_02, double longitude_02)
 {
-
     // Set our coordinates
     latitude_01  = latitude_01 * M_PI / 180.0;
     longitude_01 = longitude_01 * M_PI / 180.0;
@@ -119,7 +119,6 @@ double vincenty_distance(double latitude_01, double longitude_01, double latitud
 
 double vincenty_distance(std::pair<double, double> point1, std::pair<double, double> point2)
 {
-
 	double latitude_01 = point1.first;
 	double longitude_01 = point1.second;
 	double latitude_02 = point2.first;
@@ -146,7 +145,6 @@ double vincenty_distance(std::pair<double, double> point1, std::pair<double, dou
 
 double vincenty_distance(road my_road)
 {
-
 	std::pair<double, double> point1 = my_road.first;
 	std::pair<double, double> point2 = my_road.second;
 
