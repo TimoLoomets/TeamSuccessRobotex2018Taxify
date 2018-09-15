@@ -15,7 +15,8 @@ void remove_passanger_from_graph(
 	remove_points_from_graph(map_graph_pointer, std::make_pair(passenger_pointer->start_lat, passenger_pointer->start_lon), passenger_pointer->start_nodes);
 	remove_points_from_graph(map_graph_pointer, std::make_pair(passenger_pointer->end_lat, passenger_pointer->end_lon), passenger_pointer->end_nodes);		
 }
-
+/*
 int main(){
 	return 0;
 }
+*/

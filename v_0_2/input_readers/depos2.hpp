@@ -4,7 +4,7 @@
 
 using namespace std;
 
-vector <depo_data> get_depos() {
+vector <depo_data> get_depos(){
 	vector <depo_data> depos_coordinates;
 	depo_data coordinates;
 	int lines = 30; 

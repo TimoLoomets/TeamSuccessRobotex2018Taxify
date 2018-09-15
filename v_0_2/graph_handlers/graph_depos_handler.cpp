@@ -12,10 +12,12 @@ void add_depos_to_graph(
 			std::map<std::pair<double, double>, std::map<std::pair<double, double>, double> > * map_graph_pointer,
 			std::vector<depo_data> * depos_pointer){
 	for(std::vector<depo_data>::iterator depos_it = (*depos_pointer).begin(); depos_it < (*depos_pointer).end(); ++depos_it){
+		std::cout << "adding depo nr: " << depos_it - (*depos_pointer).begin() << "\n";
 		add_depo_to_graph(map_graph_pointer, &(*depos_it));
 	}
 }
-
+/*
 int main(){
 	return 0;
 }
+*/

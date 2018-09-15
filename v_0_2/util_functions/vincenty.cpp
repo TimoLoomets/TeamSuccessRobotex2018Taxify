@@ -12,80 +12,140 @@ double Vincenty_Distance( const double& latitude_01, const double& longitude_01,
                           const double& a,
                           const double& b )
 {
+	if(latitude_02 != latitude_02){
+        std::cout << "latitude_02 NAN \n";
+        while(true){}
+    }
+	//std::cout << "cp19\n";
 	if(latitude_01 == latitude_02 && longitude_01 == longitude_02)return 0;
+	//std::cout << "cp20\n";
     // Flattening
     const double f = (a-b)/a;
-
+    if(f != f){
+        std::cout << "f NAN \n";
+        while(true){}
+    }
+	//std::cout << "cp21\n";
     // tan U1
     const double tan_U1 = (1-f) * std::tan(latitude_01);
     const double tan_U2 = (1-f) * std::tan(latitude_02);
-
+    if(tan_U2 != tan_U2){
+        std::cout << "tan_U2 NAN \n";
+        while(true){}
+    }
+	//std::cout << "cp22\n";
     // Longitudinal Distance
     const double cos_U1 = 1 / std::sqrt(1 + tan_U1 * tan_U1);
     const double cos_U2 = 1 / std::sqrt(1 + tan_U2 * tan_U2);
+    if(cos_U2 != cos_U2){
+        std::cout << "cos_U2 NAN \n";
+        while(true){}
+    }
     const double sin_U1 = tan_U1 * cos_U1;
     const double sin_U2 = tan_U2 * cos_U2;
-
+	//std::cout << "cp23\n";
     // Iterate until complete
     const double L = longitude_02 - longitude_01;
     double lambda = L;
     double diff, sigma;
     double cos_alpha_sq, cos_2sigma_m;
     double cos_sigma, sin_sigma;
-
-    while( true ){
-
+	//std::cout << "cp24\n";
+    while(true){
         // 
-        double sin_lambda = std::sin( lambda );
-        double cos_lambda = std::cos( lambda );
+        double sin_lambda = std::sin(lambda);
+        if(sin_lambda != sin_lambda){
+        	std::cout << "sin_lambda NAN \n";
+        	while(true){}
+        }
+        double cos_lambda = std::cos(lambda);
 
         double c1 = (cos_U2 * sin_lambda)*(cos_U2 * sin_lambda);
+        if(c1 != c1){
+        	std::cout << "c1 NAN \n";
+        	while(true){}
+        }
         double c2 = (cos_U1 * sin_U2);
+        if(c2 != c2){
+        	std::cout << "c2 NAN \n";
+        	while(true){}
+        }
         double c3 = (sin_U1 * cos_U2 * cos_lambda);
-
+		if(c3 != c3){
+        	std::cout << "c3 NAN \n";
+        	while(true){}
+        }
 
         //  sin sigma
         sin_sigma = std::sqrt( c1 + ( c2 - c3 )*( c2 - c3 ) );
-
+		if(sin_sigma != sin_sigma){
+        	std::cout << "sin_sigma NAN \n";
+        	while(true){}
+        }
         // cos sigma
         cos_sigma = sin_U1 * sin_U2 + cos_U1 * cos_U2 * cos_lambda;
-
+		if(cos_sigma != cos_sigma){
+        	std::cout << "cos_sigma NAN \n";
+        	while(true){}
+        }
         // sigma
         sigma = std::atan2( sin_sigma, cos_sigma );
-
+		if(sigma != sigma){
+        	std::cout << "sigma NAN \n";
+        	while(true){}
+        }
         // sin alpha
         double sin_alpha = (cos_U1 * cos_U2 * sin_lambda)/(sin_sigma);
-
+		if(sin_alpha != sin_alpha){
+        	std::cout << "sin_alpha NAN \n";
+        	while(true){}
+        }
         // cos^2 alpha
         cos_alpha_sq = 1 - (sin_alpha*sin_alpha);
-
+		if(cos_alpha_sq != cos_alpha_sq){
+        	std::cout << "cos_alpha_sq NAN \n";
+        	while(true){}
+        }
         // cos^2 2sigmam
         cos_2sigma_m = cos_sigma - (2 * sin_U1 * sin_U2)/(cos_alpha_sq);
-
+		if(cos_2sigma_m != cos_2sigma_m){
+        	std::cout << "cos_2sigma_m NAN \n";
+        	while(true){}
+        }
         // C
         double C = (f/16.0) * cos_alpha_sq * (4 + f * (4 - 3 * cos_alpha_sq));
+        if(C != C){
+        	std::cout << "C NAN \n";
+        	while(true){}
+        }
 
         // Update Lambda
         diff = lambda;
         lambda = L + (1-C) * f * sin_alpha * (sigma + C * sin_sigma * ( cos_2sigma_m + C * cos_sigma * (-1 + 2 * cos_2sigma_m*cos_2sigma_m)));
+        if(lambda != lambda){
+        	std::cout << "lambda NAN \n";
+        	while(true){}
+        }
         diff = lambda - diff;
-        if( std::fabs(diff) < 0.00001 ){ break; }
+        //std::cout << "\t\tdiff: " << std::fabs(diff) << "\n";
+        if(std::fabs(diff) < 0.00001){ break; }
     }
-
+	//std::cout << "cp25\n";
     // U2
     double u_sq = cos_alpha_sq  * (a*a - b*b)/(b*b);
-
+	//std::cout << "cp26\n";
     // Compute A, B
     double A = 1 + (u_sq/16384) * (4096 + u_sq * (-768 + u_sq * (320 - 175 * u_sq)));
-
+	//std::cout << "cp27\n";
     double B = (u_sq / 1024) * (256 + u_sq * (-128 + u_sq * (-128 + u_sq * (74 - 47 * u_sq))));
-
+	//std::cout << "cp28\n";
     // Sigma
     double cos_2sigma_m_sq = cos_2sigma_m * cos_2sigma_m;
     double delta_sigma = B * sin_sigma * ( cos_2sigma_m + (B/4.0) * (cos_sigma * (-1 * 2 * cos_2sigma_m_sq ) - (B/6.0) * cos_2sigma_m * (-3 + 4 * sin_sigma*sin_sigma) * (-3 + 4 * cos_2sigma_m_sq)));
-
+	//std::cout << "cp29\n";
     // Distance
     double s = b * A * (sigma - delta_sigma);
+    //std::cout << "cp30\n";
     return s;
 }
 
@@ -119,10 +179,19 @@ double vincenty_distance(double latitude_01, double longitude_01, double latitud
 
 double vincenty_distance(std::pair<double, double> point1, std::pair<double, double> point2)
 {
+	if(point2.first != point2.first){
+        std::cout << "point2.first NAN \n";
+        while(true){}
+    }
 	double latitude_01 = point1.first;
 	double longitude_01 = point1.second;
 	double latitude_02 = point2.first;
 	double longitude_02 = point2.second;
+	
+	if(latitude_02 != latitude_02){
+        std::cout << "latitude_02.0 NAN \n";
+        while(true){}
+    }
 	
     // Set our coordinates
     latitude_01  = latitude_01 * M_PI / 180.0;
@@ -131,10 +200,16 @@ double vincenty_distance(std::pair<double, double> point1, std::pair<double, dou
     latitude_02 =  latitude_02 * M_PI / 180.0;
     longitude_02 = longitude_02 * M_PI / 180.0;
 
+	if(latitude_02 != latitude_02){
+        std::cout << "latitude_02.1 NAN \n";
+        while(true){}
+    }
+    
     // Set the datum components
     const double a = 6378137.0;
     const double b = 6356752.314245;
-
+	
+	
     // Vincenty Distance
     double distance = Vincenty_Distance( latitude_01, longitude_01,
                                          latitude_02, longitude_02,
