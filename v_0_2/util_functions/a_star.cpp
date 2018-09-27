@@ -4,6 +4,15 @@
 #include "../graph_handlers/graph_depos_handler.cpp"
 
 
+double path_length(	std::vector<std::pair<double, double> > path,
+					std::map<std::pair<double, double>, std::map<std::pair<double, double>, double> > * graph){
+	double total_length = 0;	
+	for(int i=0; i<path.size()-1; i++){
+		total_length += graph->find(path[i])->second.find(path[i+1])->second;
+	}
+	return total_length;
+}
+
 std::vector<std::pair<double, double> > reconstruct_path(std::map<std::pair<double, double>, std::pair<double, double> > came_from, std::pair<double, double> current){
 	std::vector<std::pair<double, double> > total_path = {current};
 	while(came_from.find(current)!=came_from.end()){
@@ -40,6 +49,7 @@ void a_star(std::pair<double, double> start_loc,
 		//std::cout << "current: " << current.first << " , " << current.second << "\n";
 		if(current == end_loc){
 			*path = reconstruct_path(came_from, end_loc);
+			*length = path_length(*path, graph);
 		}
 		
 		if(open_set.find(current) != open_set.end()){

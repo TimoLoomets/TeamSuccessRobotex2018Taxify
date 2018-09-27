@@ -19,18 +19,20 @@ vector <depo_data> get_depos(){
 	ifs >> sissetulev_rida;
 	
 	for (int i = 0; i < lines; ++i) { 
+
 		depo_data depos_information;
 		ifs >> sissetulev_rida;
-		
+
 		depos_lat_string = sissetulev_rida.substr(0, sissetulev_rida.find(",", 0));
-		
+
 		sissetulev_rida = sissetulev_rida.substr(sissetulev_rida.find(",", 0) + 1, sissetulev_rida.length()); 
-		
+
 		depos_lng_string = sissetulev_rida;
-		
+
+
 		coordinates.lat = stold(depos_lat_string);
 		coordinates.lon = stold(depos_lng_string);
-		
+
 		//cout << "rida : " << i << "			" << depos_lat_string << "    " << depos_lng_string << endl;
 		depos_coordinates.push_back(coordinates);
 	}
