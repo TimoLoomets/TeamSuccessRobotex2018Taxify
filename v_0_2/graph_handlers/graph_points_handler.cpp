@@ -34,26 +34,28 @@ std::set<std::pair<double, double> > add_point_to_graph(
 	std::set<road> my_roads = relevant_roads_around(point_location.second, point_location.first, 	
 														Tallinn_E, 		Tallinn_N, 
 														std::max(Tallinn_N - Tallinn_S, Tallinn_E - Tallinn_W), 0, used_depth);
-	std::cout << "relevant roads: " << my_roads.size() << "\n";
+	//std::cout << "relevant roads: " << my_roads.size() << "\n";
 											
 	for(road r : my_roads){
-		if(r.first.first == r.first.second && r.second.first == r.second.second){
+		if(r.first.first == r.second.first && r.first.second == r.second.second){
 			std::cout << "bad road in my_roads: " << r.first.first << " , " << r.first.second << " - " << r.second.first << " , " << r.second.second << "\n";
 			while(true){}
 		}
 	}			
 														
 	for(auto current_road : my_roads){
-		std::cout << "cp0\n";
-		std::cout << "current_road: " << current_road.first.first << " , " << current_road.first.second << " - " << current_road.second.first << " , " << current_road.second.second << "\n";
+		//std::cout << "cp0\n";
+		//std::cout << "current_road: " << current_road.first.first << " , " << current_road.first.second << " - " << current_road.second.first << " , " << current_road.second.second << "\n";
 		std::set<std::pair<double, double> > road_intersections = geodesic_intersections(point_location, current_road);
-		std::cout << "cp1\n";
-		std::cout << "\tintersections: " << road_intersections.size() << "\n";
+		//std::cout << "cp1\n";
+		//std::cout << "\tintersections: " << road_intersections.size() << "\n";
 		if(!road_intersections.empty()){
-			std::cout << "cp2\n";
+			//std::cout << "cp2\n";
 			if(road_intersections.size() == 1){
-				std::cout << "cp3\n";
+				//std::cout << "cp3\n";
 				std::pair<double, double> current_intersection = *(road_intersections.begin());
+				insert_to_map_pointer(map_graph_pointer, current_intersection, point_location, 50);
+				insert_to_map_pointer(map_graph_pointer, point_location, current_intersection, 50);
 				double first_distance = vincenty_distance(current_road.first, current_intersection);
 				double second_distance = vincenty_distance(current_road.second, current_intersection);
 				insert_to_map_pointer(map_graph_pointer, current_road.first, current_intersection, first_distance);
@@ -62,9 +64,13 @@ std::set<std::pair<double, double> > add_point_to_graph(
 				insert_to_map_pointer(map_graph_pointer, current_intersection, current_road.second, second_distance);
 				output_nodes.insert(current_intersection);
 			}else if(road_intersections.size() == 2){
-				std::cout << "cp4\n";
+				//std::cout << "cp4\n";
 				std::pair<double, double> current_intersection_1 = *(road_intersections.begin());
 				std::pair<double, double> current_intersection_2 = *std::next(road_intersections.begin(), 1);
+				insert_to_map_pointer(map_graph_pointer, point_location, current_intersection_1, 50);
+				insert_to_map_pointer(map_graph_pointer, point_location, current_intersection_2, 50);
+				insert_to_map_pointer(map_graph_pointer, current_intersection_1, point_location, 50);
+				insert_to_map_pointer(map_graph_pointer, current_intersection_2, point_location, 50);
 				double intersection_distance = vincenty_distance(current_intersection_1, current_intersection_2);
 				insert_to_map_pointer(map_graph_pointer, current_intersection_1, current_intersection_2, intersection_distance);
 				insert_to_map_pointer(map_graph_pointer, current_intersection_2, current_intersection_1, intersection_distance);

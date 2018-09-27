@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 #include "../util_functions/util_functions.hpp"
-#include "../graph_handlers/graph_points_handler.cpp"
+#include "../graph_handlers/graph_handlers.hpp"
 
 void add_passenger_to_graph(
 			std::map<std::pair<double, double>, std::map<std::pair<double, double>, double> > * map_graph_pointer, 

@@ -59,7 +59,7 @@ void populate(std::set<road> inputs, double upper_x, double upper_y, double widt
 
 	for(road r : inputs){
 		if(intersects_square(r, upper_x, upper_y, width)){
-			if(r.first.first == r.first.second && r.second.first == r.second.second){
+			if(r.first.first == r.second.first && r.first.second == r.second.second){
 				std::cout << "bad road insert: " << r.first.first << " , " << r.first.second << " - " << r.second.first << " , " << r.second.second << "\n";
 				while(true){}
 			}
@@ -102,7 +102,7 @@ std::set<road> relevant_roads(double x, double y, double current_x, double curre
 		}
 	}else{
 		for(road r : tree[node]){
-			if(r.first.first == r.first.second && r.second.first == r.second.second){
+			if(r.first.first == r.second.first && r.first.second == r.second.second){
 				std::cout << "bad road return: " << r.first.first << " , " << r.first.second << " - " << r.second.first << " , " << r.second.second << "\n";
 				while(true){}
 			}

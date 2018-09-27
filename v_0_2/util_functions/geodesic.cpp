@@ -36,12 +36,11 @@ std::pair<double, double> lineLineIntersection(std::pair<double, double>  A, std
     }
 }
 
-std::pair<double, double> get_closest_point(double Ax, double Ay, double Bx, double By, double Px, double Py)
-{
+std::pair<double, double> get_closest_point(double Ax, double Ay, double Bx, double By, double Px, double Py){
 	if(Ax != Ax){
-        std::cout << "Ax NAN \n";
-        while(true){}
-    }
+	    std::cout << "Ax NAN \n";
+		while(true){}
+	}
     if(Ay != Ay){
         std::cout << "Ay NAN \n";
         while(true){}
@@ -70,27 +69,27 @@ std::pair<double, double> get_closest_point(double Ax, double Ay, double Bx, dou
     }
 	double t = ABdotAP / magAB2;  
  	if(t != t){
- 		std::cout << "ABdotAP: " << ABdotAP << "\n";
-        std::cout << "magAB2: " << magAB2 << "\n";
-        std::cout << "ABx: " << ABx << "\n";
-        std::cout << "ABy: " << ABy << "\n";
-        std::cout << "Ax: " << Ax << "\n";
-        std::cout << "Bx: " << Bx << "\n";
-        std::cout << "Ay: " << Ay << "\n";
-        std::cout << "By: " << By << "\n";
+ 		//std::cout << "ABdotAP: " << ABdotAP << "\n";
+        //std::cout << "magAB2: " << magAB2 << "\n";
+        //std::cout << "ABx: " << ABx << "\n";
+        //std::cout << "ABy: " << ABy << "\n";
+        //std::cout << "Ax: " << Ax << "\n";
+        //std::cout << "Bx: " << Bx << "\n";
+        //std::cout << "Ay: " << Ay << "\n";
+        //std::cout << "By: " << By << "\n";
         std::cout << "t NAN \n";
         while(true){}
     }
 	if ( t < 0){
-		std::cout << "t < 0 \n";
+		//std::cout << "t < 0 \n";
         return std::make_pair(Ax, Ay);
   	}   
   	else if (t > 1){
-        std::cout << "t > 1 \n";
+        //std::cout << "t > 1 \n";
         return std::make_pair(Bx, By);
   	}
   	else{
-  		std::cout << "0 < t < 1 \n";
+  		//std::cout << "0 < t < 1 \n";
         return std::make_pair(Ax + ABx*t, Ay + ABy*t);
   	} 
 }
@@ -122,14 +121,14 @@ double calculate_heading(double lat1, double long1, double lat2, double long2)
 }
 
 std::set<std::pair<double, double> > geodesic_intersections(std::pair<double, double> depo_loc, road my_road){
-	std::cout << "cp5\n";
+	//std::cout << "cp5\n";
 	std::set<std::pair<double, double> > output;
 	//road my_road = std::make_pair()
 	//std::pair<double, double> depo_loc = std::make_pair(59.372877000, 24.641514000);
 	std::pair<double, double> road_A = my_road.first;//std::make_pair(59.373220858, 24.643245935);
 	std::pair<double, double> road_B = my_road.second;//std::make_pair(59.372310801, 24.640451074);
-	std::cout << my_road.first.first << " , " << my_road.first.second << " - " << my_road.second.first << " , " << my_road.second.second << "\n";
-	std::cout << "cp6\n";
+	//std::cout << my_road.first.first << " , " << my_road.first.second << " - " << my_road.second.first << " , " << my_road.second.second << "\n";
+	//std::cout << "cp6\n";
 	std::pair<double, double> my_point = get_closest_point(road_A.first, road_A.second, road_B.first, road_B.second, depo_loc.first, depo_loc.second);//24.640451074, 59.372310801, 24.643245935, 59.373220858, 24.641514000,59.372877000);
 	//std::cout << "point: " << my_point.first << " , " << my_point.second << "\n";
 	
@@ -137,10 +136,10 @@ std::set<std::pair<double, double> > geodesic_intersections(std::pair<double, do
 	
 	double earth_radius = 6378137;
 	
-	std::cout << "cp7\n";
-	std::cout << my_point.first << " , " << my_point.second << "\n";
+	//std::cout << "cp7\n";
+	//std::cout << my_point.first << " , " << my_point.second << "\n";
 	if(vincenty_distance(depo_loc, my_point) <= 50){
-		std::cout << "cp8\n";
+		//std::cout << "cp8\n";
 		double distance_to_line = vincenty_distance(depo_loc, my_point) / earth_radius;
 		double radius = 50 / earth_radius;
 		
@@ -148,32 +147,32 @@ std::set<std::pair<double, double> > geodesic_intersections(std::pair<double, do
 		//double n_dtl = distance_to_line/earth_radius;
 		//std::cout << "dist to line: " << distance_to_line << " dtl: " << n_dtl << "\n";
 		//double line_distance = distance_on_line(radius, distance_to_line);
-		std::cout << "cp9\n";
+		//std::cout << "cp9\n";
 		double my_heading_1 = calculate_heading(my_point.first, my_point.second, road_A.first, road_A.second);
-		std::cout << "cp10\n";
+		//std::cout << "cp10\n";
 		double my_heading_2 = calculate_heading(my_point.first, my_point.second, road_B.first, road_B.second);
-		std::cout << "cp11\n";
+		//std::cout << "cp11\n";
 		double line_distance = distance_on_line(radius, distance_to_line) * earth_radius;
 		
 		//std::cout << "distance on line: " << line_distance << "\n";
 		//std::cout << "headings: " << my_heading_1 << " , " << my_heading_2 << "\n";
-		std::cout << "cp12\n";
+		//std::cout << "cp12\n";
 		const double halfC = M_PI / 180;
-		std::cout << "cp13\n";
+		//std::cout << "cp13\n";
 		std::pair<double, double> n_my_point = std::make_pair(my_point.first*halfC, my_point.second*halfC);
-		std::cout << "cp14\n";
+		//std::cout << "cp14\n";
 		std::pair<double, double> circle_point_1 = vincenty_location(n_my_point, my_heading_1*halfC, line_distance);
-		std::cout << "cp15\n";
+		//std::cout << "cp15\n";
 		std::pair<double, double> circle_point_2 = vincenty_location(n_my_point, my_heading_2*halfC, line_distance);
 
 		//std::cout << "circle point 1: " << circle_point_1.first/halfC << " , " << circle_point_1.second/halfC << "\n";
 		//std::cout << "circle point 2: " << circle_point_2.first/halfC << " , " << circle_point_2.second/halfC << "\n";
-		std::cout << "cp16\n";
+		//std::cout << "cp16\n";
 		output.insert(std::make_pair(circle_point_1.first/halfC, circle_point_1.second/halfC));
-		std::cout << "cp17\n";
+		//std::cout << "cp17\n";
 		output.insert(std::make_pair(circle_point_2.first/halfC, circle_point_2.second/halfC));
 	}
-	std::cout << "cp18\n";
+	//std::cout << "cp18\n";
 	return output;
 }
 /*

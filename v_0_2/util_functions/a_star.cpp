@@ -1,5 +1,8 @@
 #include <bits/stdc++.h>
-#include "util_functions.hpp"
+#include "../util_functions/util_functions.hpp"
+#include "../input_readers/graph_file_reader.cpp"
+#include "../graph_handlers/graph_depos_handler.cpp"
+
 
 std::vector<std::pair<double, double> > reconstruct_path(std::map<std::pair<double, double>, std::pair<double, double> > came_from, std::pair<double, double> current){
 	std::vector<std::pair<double, double> > total_path = {current};
@@ -18,6 +21,7 @@ void a_star(std::pair<double, double> start_loc,
 	//std::set<std::pair<double, vector<std::pair<double, double> > > > to_check;
 	std::set<std::pair<double, double> > closed_set;
 	std::set<std::pair<double, double> > open_set;
+	open_set.insert(start_loc);
 	
 	std::map<std::pair<double, double>, std::pair<double, double> > came_from;
 	std::map<std::pair<double, double>, double> g_score;
@@ -33,7 +37,7 @@ void a_star(std::pair<double, double> start_loc,
 				current = node;
 			}
 		}
-		
+		//std::cout << "current: " << current.first << " , " << current.second << "\n";
 		if(current == end_loc){
 			*path = reconstruct_path(came_from, end_loc);
 		}
@@ -67,21 +71,9 @@ void a_star(std::pair<double, double> start_loc,
 
 /*
 int main(){
-	std::map<std::pair<double, double>, std::map<std::pair<double, double>, double> > map_graph;
-	std::ifstream input_graph;
-	input_graph.open("../input_files/graph.txt");
-	std::string current_line;
+	read_graph_file();
+	std::map<std::pair<double, double>, std::map<std::pair<double, double>, double> > * map_graph_pointer = get_file_graph();
 	
-	while(getline(input_graph, current_line)){
-		std::istringstream iss(current_line);
-		std::string start_lat;
-		std::string start_lon;
-		std::string end_lat;
-		std::string end_lon;
-		std::string length;
-		iss >> start_lat >> start_lon >> end_lat >> end_lon >> length;
-		map_graph[std::make_pair(std::stod(start_lat), std::stod(start_lon))][std::make_pair(std::stod(end_lat), std::stod(end_lon))] = std::stod(length);
-	}
 	
 	
 	
