@@ -1,6 +1,9 @@
+#ifndef GRAPH_PASSENGERS_HANDLER_CPP
+#define GRAPH_PASSENGER_HANDLER_CPP
+
 #include <bits/stdc++.h>
 #include "../util_functions/util_functions.hpp"
-#include "../graph_handlers/graph_handlers.hpp"
+#include "graph_handlers.hpp"
 
 void add_passenger_to_graph(
 			std::map<std::pair<double, double>, std::map<std::pair<double, double>, double> > * map_graph_pointer, 
@@ -20,3 +23,4 @@ int main(){
 	return 0;
 }
 */
+#endif

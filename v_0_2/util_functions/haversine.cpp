@@ -1,3 +1,6 @@
+#ifndef HAVERSINE_CPP
+#define HAVERSINE_CPP
+
 #include <bits/stdc++.h>
 
 #include <math.h>
@@ -19,3 +22,5 @@ double haversine_distance(double lat1d, double lon1d, double lat2d, double lon2d
   v = sin((lon2r - lon1r)/2);
   return 2.0 * earthRadiusM * asin(sqrt(u * u + cos(lat1r) * cos(lat2r) * v * v));
 }
+
+#endif

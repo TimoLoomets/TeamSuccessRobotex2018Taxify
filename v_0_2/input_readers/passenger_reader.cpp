@@ -1,3 +1,6 @@
+#ifndef PASSENGER_READER_CPP
+#define PASSENGER_READER_CPP
+
 #include <bits/stdc++.h>
 #include "../util_functions/data_types.h"
 
@@ -52,3 +55,5 @@ std::vector<passenger_data> get_passengers(){
 	}*/
 	return output_vector;
 }
+
+#endif

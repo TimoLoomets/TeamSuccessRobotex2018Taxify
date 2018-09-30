@@ -1,4 +1,5 @@
-
+#ifndef INTERSECT_CHECK_CPP
+#define INTERSECT_CHECK_CPP
 
 #include "data_types.h"
 // A C++ program to check if two given line segments intersect
@@ -116,3 +117,4 @@ int main()
     return 0;
 }
 */
+#endif

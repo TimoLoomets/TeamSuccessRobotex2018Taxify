@@ -1,3 +1,6 @@
+#ifndef DEPOS2_CPP
+#define DEPOS2_CPP
+
 #include "../util_functions/data_types.h" 
 
 #include <bits/stdc++.h>
@@ -38,3 +41,5 @@ vector <depo_data> get_depos(){
 	}
 	return depos_coordinates;
 }
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef GRAPH_DEPOS_HANDLER_CPP
+#define GRAPH_DEPOS_HANDLER_CPP
+
 #include <bits/stdc++.h>
 #include "../util_functions/util_functions.hpp"
 #include "../graph_handlers/graph_points_handler.cpp"
@@ -21,3 +24,4 @@ int main(){
 	return 0;
 }
 */
+#endif

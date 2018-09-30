@@ -1,5 +1,5 @@
-#ifndef GRAPH_HANDLERS_HPP
-#define GRAPH_HANDLERS_HPP
+#ifndef INPUT_READERS_HPP
+#define INPUT_READERS_HPP
 
 #include <bits/stdc++.h>
 #include "../util_functions/util_functions.hpp"

@@ -1,3 +1,6 @@
+#ifndef GEODESIC_CPP
+#define GEODESIC_CPP
+
 #include <bits/stdc++.h>
 #include "util_functions.hpp"
 #include "data_types.h" 
@@ -185,3 +188,5 @@ int main(){
 		std::cout << "output points: " << point.first << " , " << point.second << "\n";
 	}
 }*/
+
+#endif

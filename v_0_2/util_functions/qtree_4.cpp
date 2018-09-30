@@ -1,3 +1,6 @@
+#ifndef QTREE_4_CPP
+#define QTREE_4_CPP
+
 #include <bits/stdc++.h>
 
 #include "data_types.h"
@@ -129,3 +132,5 @@ std::set<road> relevant_roads_around(double x, double y, double current_x, doubl
 	}
 	return output_roads;
 }
+
+#endif

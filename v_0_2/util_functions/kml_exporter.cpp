@@ -1,3 +1,6 @@
+#ifndef KML_EXPORTER_CPP
+#define KML_EXPORTER_CPP
+
 #include <bits/stdc++.h>
 
 #include "data_types.h"
@@ -43,3 +46,5 @@ int main(){
 	
 	kml_end();
 }*/
+
+#endif

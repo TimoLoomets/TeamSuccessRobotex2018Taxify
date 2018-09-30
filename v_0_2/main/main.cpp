@@ -2,10 +2,14 @@
 #include "../util_functions/util_functions.hpp"
 #include "../input_readers/input_readers.hpp"
 #include "../graph_handlers/graph_handlers.hpp"
-#include "../graph_handlers/graph_passengers_handler.cpp"
+//#include "../graph_handlers/graph_passengers_handler.cpp"
 
 int main(){
+	//add_depos_to_graph();
+
 	int total_cars = 9990;
+	double car_speed = 50; //km/s
+	double rider_decay = 3; //min
 
 	std::cout << "started reading graph file \n";
 	read_graph_file();
@@ -34,7 +38,7 @@ int main(){
 	int depo_nr = 0;	
 	for(auto current_depo : all_depos){
 		std::cout << "depo: " << current_depo.lat << " , " << current_depo.lon << " nodes: " << current_depo.nodes.size() << "\n";
-		for(int car_nr = 0; car_nr < (total_cars / all_depos.size()); car_nr++){
+		for(unsigned int car_nr = 0; car_nr < (total_cars / all_depos.size()); car_nr++){
 			//std::cout << "car nr: " << int(depo_nr * total_cars / all_depos.size() + car_nr) << "\n";
 			all_cars[int(depo_nr * total_cars / all_depos.size() + car_nr)].location = std::make_pair(current_depo.lat, current_depo.lon);
 		}
@@ -43,10 +47,29 @@ int main(){
 	
 	
 	for(passenger_data current_passenger : all_passengers){
+		std::pair<double, double> start_loc = std::make_pair(current_passenger.start_lon, current_passenger.start_lat);
+		a_star_set_start(start_loc, map_graph_pointer);
+
 		double closest_distance = DBL_MAX;
-		car_data * closest_car;
+		car_data * best_car;
+		std::vector<std::pair<double, double> > best_path;		
+		bool best_at_depo = true;
+		bool best_charging = true;
 		for(car_data current_car : all_cars){
-			
+			if(current_car.usable){
+				double car_distance = a_star_get_distance_to(current_car.location);
+				
+				if(car_distance <= car_speed / 60 * rider_decay){
+					/*
+					if(current_car.at_depo){
+						if(car_distance < closest_distance){
+							closest_parked_distance = car_distance;
+							best_parked_car = &current_car;
+						}
+					}
+					*/
+				}
+			}
 		}
 	}
 	

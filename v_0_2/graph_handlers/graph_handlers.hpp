@@ -3,9 +3,9 @@
 
 #include <bits/stdc++.h>
 #include "../util_functions/util_functions.hpp"
-#include "graph_points_handler.cpp"
-#include "graph_depos_handler.cpp"
-#include "graph_passengers_handler.cpp"
+#include "../graph_handlers/graph_points_handler.cpp"
+#include "../graph_handlers/graph_depos_handler.cpp"
+#include "../graph_handlers/graph_passengers_handler.cpp"
 
 
 std::set<std::pair<double, double> > add_point_to_graph(
@@ -26,5 +26,12 @@ void add_passenger_to_graph(
 void remove_passanger_from_graph(
 			std::map<std::pair<double, double>, std::map<std::pair<double, double>, double> > * map_graph_pointer, 
 			passenger_data * passenger_pointer);
+
+/*
+int main () {
+	//add_depos_to_graph();
+	return 0;
+}
+*/
 
 #endif

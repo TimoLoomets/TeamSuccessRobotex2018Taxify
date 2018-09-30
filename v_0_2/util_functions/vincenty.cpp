@@ -1,3 +1,6 @@
+#ifndef VINCENTY_CPP
+#define VINCENTY_CPP
+
 // C++ Standard Libraries
 #include <cmath>
 #include <iostream>
@@ -352,3 +355,4 @@ std::pair<double, double> vincenty_location(std::pair<double, double> &pt, doubl
 {
 	
 }*/
+#endif

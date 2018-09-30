@@ -41,6 +41,9 @@ public:
 	std::set<passenger_data * > passenger_log;
 	int battery = 200;
 	std::set<std::pair<double, double> > current_path;
+	bool usable = true;
+	bool at_depo = true;
+	bool charging = false;
 };
 
 #endif
