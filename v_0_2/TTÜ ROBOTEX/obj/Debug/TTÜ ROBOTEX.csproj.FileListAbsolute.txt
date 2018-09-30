@@ -1,0 +1,15 @@
+C:\Users\enric\source\repos\App2\TTÜ ROBOTEX\bin\Debug\TTÜ ROBOTEX.exe.config
+C:\Users\enric\source\repos\App2\TTÜ ROBOTEX\bin\Debug\TTÜ ROBOTEX.exe
+C:\Users\enric\source\repos\App2\TTÜ ROBOTEX\bin\Debug\TTÜ ROBOTEX.pdb
+C:\Users\enric\source\repos\App2\TTÜ ROBOTEX\obj\Debug\TTÜ ROBOTEX.csprojAssemblyReference.cache
+C:\Users\enric\source\repos\App2\TTÜ ROBOTEX\obj\Debug\MainWindow.g.cs
+C:\Users\enric\source\repos\App2\TTÜ ROBOTEX\obj\Debug\App.g.cs
+C:\Users\enric\source\repos\App2\TTÜ ROBOTEX\obj\Debug\TTÜ ROBOTEX_MarkupCompile.cache
+C:\Users\enric\source\repos\App2\TTÜ ROBOTEX\obj\Debug\TTÜ ROBOTEX_MarkupCompile.lref
+C:\Users\enric\source\repos\App2\TTÜ ROBOTEX\obj\Debug\MainWindow.baml
+C:\Users\enric\source\repos\App2\TTÜ ROBOTEX\obj\Debug\TTÜ ROBOTEX.g.resources
+C:\Users\enric\source\repos\App2\TTÜ ROBOTEX\obj\Debug\TTÜ_ROBOTEX.Properties.Resources.resources
+C:\Users\enric\source\repos\App2\TTÜ ROBOTEX\obj\Debug\TTÜ ROBOTEX.csproj.GenerateResource.cache
+C:\Users\enric\source\repos\App2\TTÜ ROBOTEX\obj\Debug\TTÜ ROBOTEX.csproj.CoreCompileInputs.cache
+C:\Users\enric\source\repos\App2\TTÜ ROBOTEX\obj\Debug\TTÜ ROBOTEX.exe
+C:\Users\enric\source\repos\App2\TTÜ ROBOTEX\obj\Debug\TTÜ ROBOTEX.pdb
