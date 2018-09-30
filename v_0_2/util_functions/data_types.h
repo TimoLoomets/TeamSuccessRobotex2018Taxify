@@ -39,7 +39,7 @@ public:
 	std::pair<double, double> location;
 	std::set<passenger_data * > current_passengers;
 	std::set<passenger_data * > passenger_log;
-	int battery = 200;
+	int battery = 200000;
 	std::set<std::pair<double, double> > current_path;
 	bool usable = true;
 	bool at_depo = true;

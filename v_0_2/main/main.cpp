@@ -48,18 +48,23 @@ int main(){
 	
 	for(passenger_data current_passenger : all_passengers){
 		std::pair<double, double> start_loc = std::make_pair(current_passenger.start_lon, current_passenger.start_lat);
-		a_star_set_start(start_loc, map_graph_pointer);
+
+		a_star_instance a_star_passenger;		
+		a_star_passenger.set_start(start_loc, map_graph_pointer);
 
 		double closest_distance = DBL_MAX;
 		car_data * best_car;
 		std::vector<std::pair<double, double> > best_path;		
 		bool best_at_depo = true;
 		bool best_charging = true;
+		
 		for(car_data current_car : all_cars){
 			if(current_car.usable){
-				double car_distance = a_star_get_distance_to(current_car.location);
-				
+				double car_distance = a_star_passenger.get_distance_to(current_car.location);
 				if(car_distance <= car_speed / 60 * rider_decay){
+					if(!(current_car.at_depo) && best_at_depo){
+						
+					}
 					/*
 					if(current_car.at_depo){
 						if(car_distance < closest_distance){
