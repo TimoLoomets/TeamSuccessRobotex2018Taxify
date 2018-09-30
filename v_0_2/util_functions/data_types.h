@@ -30,6 +30,7 @@ public:
 	double ride_value;	
 	std::set<std::pair<double, double> > start_nodes;
 	std::set<std::pair<double, double> > end_nodes;
+	int on_board_timer = 0;
 };
 
 class car_data
