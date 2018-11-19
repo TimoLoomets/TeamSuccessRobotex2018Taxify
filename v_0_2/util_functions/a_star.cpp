@@ -14,7 +14,7 @@ class a_star_instance{
 	std::set<std::pair<double, double> > open_set;
 	std::map<std::pair<double, double>, std::pair<double, double> > came_from;
 	std::map<std::pair<double, double>, double> g_score;
-	/*>*/
+	/*<deprecated>*/
 	double path_length(	std::vector<std::pair<double, double> > path,
 						std::map<std::pair<double, double>, std::map<std::pair<double, double>, double> > * graph){
 		double total_length = 0;	
@@ -23,7 +23,7 @@ class a_star_instance{
 		}
 		return total_length;
 	}
-	/*<*/
+	/*</deprecated>*/
 	std::vector<std::pair<double, double> > reconstruct_path(std::pair<double, double> current){
 		std::vector<std::pair<double, double> > total_path = {current};
 		while(came_from.find(current)!=came_from.end()){
@@ -33,9 +33,9 @@ class a_star_instance{
 		return total_path;
 	}
 
-	void set_start(	std::pair<double, double> start_loc,
-							std::map<std::pair<double, double>, std::map<std::pair<double, double>, double> > * graph){
-		graph = graph;
+	void set_start(std::pair<double, double> start_loc,
+				   std::map<std::pair<double, double>, std::map<std::pair<double, double>, double> > * graph_i){
+		graph = graph_i;
 		closed_set = std::set<std::pair<double, double> >();
 		open_set = std::set<std::pair<double, double> >();
 		open_set.insert(start_loc);
@@ -45,11 +45,14 @@ class a_star_instance{
 
 	void calculate_path_to(std::pair<double, double> end_loc){
 		if(closed_set.find(end_loc) == closed_set.end()){
+			//std::cout << "\t\tcalculating path\n";
 			std::map<std::pair<double, double>, double> f_score;
 			for(std::pair<double, double> point : open_set){
 				f_score[point] = vincenty_distance(point, end_loc);
 			}
+			//std::cout << "\t\tstarting while\n";
 			while(!open_set.empty()){
+				//std::cout << "\t\t\tfinding min f score\n";
 				double min_f_score = DBL_MAX;
 				std::pair<double, double> current;
 				for(auto node : open_set){
@@ -57,32 +60,41 @@ class a_star_instance{
 						current = node;
 					}
 				}
+				//std::cout << "\t\t\tcheck if end\n";
 				if(current == end_loc){
 					break;
 				}
-				
+				//std::cout << "\t\t\tcp0\n";
 				if(open_set.find(current) != open_set.end()){
 					open_set.erase(open_set.find(current));
 				}
-				
+				//std::cout << "\t\t\tcp1\n";
 				closed_set.insert(current);
-				
+				//std::cout << "\t\t\tcp2\n";
+				//std::cout << "\t\t\tcurrent: " << current.first << " , " << current.second << "\n";
+				//std::cout << "\t\t\tcp666\n";
+				graph->find(current);
+				//std::cout << "\t\t\tcp777\n";
+				//bool is_end_check = graph->find(current) != graph->end();
+				//std::cout << "\t\t\tfind: " << is_end_check << "\n";				
 				for(auto neighbor : graph->find(current)->second){
+					//std::cout << "\t\t\tcp3\n";
 					if(closed_set.find(neighbor.first) != closed_set.end()){
 						continue;
 					}
-					
+					//std::cout << "\t\t\tcp4\n";
 					double tentative_g_score = g_score[current] + neighbor.second;
-					
+					//std::cout << "\t\t\tcp5\n";
 					if(open_set.find(neighbor.first) == open_set.end()){
 						open_set.insert(neighbor.first);
-					}
-					else if(tentative_g_score >= g_score[neighbor.first]){
+					}else if(tentative_g_score >= g_score[neighbor.first]){
 						continue;
 					}
-					
+					//std::cout << "\t\t\tcp7\n";
 					came_from[neighbor.first] = current;
+					//std::cout << "\t\t\tcp8\n";
 					g_score[neighbor.first] = tentative_g_score;
+					//std::cout << "\t\t\tcp9\n";
 					f_score[neighbor.first] = g_score[neighbor.first] + vincenty_distance(neighbor.first, end_loc);
 				}
 			}
@@ -95,7 +107,9 @@ class a_star_instance{
 	}
 
 	double get_distance_to(std::pair<double, double> end_loc){
+		//std::cout << "\tcalculating distance to: " << end_loc.first << " , " << end_loc.second << "\n";
 		calculate_path_to(end_loc);
+		//std::cout << "\treturning \n";
 		return g_score[end_loc];
 	}
 };

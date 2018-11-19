@@ -30,11 +30,12 @@ void kml_end();
 void kml_point(std::pair<double, double> point);
 void kml_road(road my_road);
 
-void a_star_set_start(	std::pair<double, double> start_loc,
-						std::map<std::pair<double, double>, std::map<std::pair<double, double>, double> > * graph);
+//<deprecated>
+void a_star_set_start(std::pair<double, double> start_loc,
+					  std::map<std::pair<double, double>, std::map<std::pair<double, double>, double> > * graph);
 std::vector<std::pair<double, double> > a_star_get_path_to(std::pair<double, double> end_loc);
 double a_star_get_distance_to(std::pair<double, double> end_loc);
-
+//</deprecated>
 
 #endif
 

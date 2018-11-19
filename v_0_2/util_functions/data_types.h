@@ -11,14 +11,6 @@
 
 typedef std::pair<std::pair<double, double>, std::pair<double, double> > road;
 
-class depo_data 
-{
-public:
-	double lat;
-	double lon;
-	std::set<std::pair<double, double> > nodes;
-};
-
 class passenger_data
 {
 public:
@@ -31,6 +23,7 @@ public:
 	std::set<std::pair<double, double> > start_nodes;
 	std::set<std::pair<double, double> > end_nodes;
 	int on_board_timer = 0;
+	int deploy_early = 0;
 };
 
 class car_data
@@ -45,6 +38,16 @@ public:
 	bool usable = true;
 	bool at_depo = true;
 	bool charging = false;
+};
+
+class depo_data 
+{
+public:
+	double lat;
+	double lon;
+	std::set<std::pair<double, double> > nodes;
+	bool normal = true;
+	std::vector<car_data> cars;
 };
 
 #endif
