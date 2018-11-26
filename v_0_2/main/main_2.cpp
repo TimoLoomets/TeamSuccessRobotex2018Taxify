@@ -47,6 +47,40 @@ int main(){
 		std::cout << "depo at: " << depo.lat << " , " << depo.lon << " nodes: " << depo.nodes.size() << " cars: " << depo.cars.size() << "\n";
 	}
 
+	int a_star_counter = 0;
+	for(std::vector<a_star_instance>::iterator a_star_i = depos_a_stars.begin(); a_star_i != depos_a_stars.end(); a_star_i++){
+		a_star_counter++;
+		std::ifstream a_star_file("../input_files/a_star_" + std::to_string(a_star_counter) + ".txt");
+		std::string depo_loc_str;
+		a_star_file >> depo_loc_str;
+		std::pair<double, double> depo_loc;
+		depo_loc.first = std::atof(depo_loc_str.c_str());
+		a_star_file >> depo_loc_str;
+		depo_loc.second = std::atof(depo_loc_str.c_str());
+		if(a_star_i->start_loc == depo_loc){
+			std::string line;
+			while (std::getline(a_star_file, line))
+    		{
+				istringstream iss(line);
+				std::pair<double, double> node;
+				std::string str;
+				iss >> str;
+				node.first = std::atof(str.c_str());
+				iss >> str;
+				node.second = std::atof(str.c_str());
+				std::pair<double, double> last;
+				iss >> str;
+				last.first = std::atof(str.c_str());
+				iss >> str;
+				last.second = std::atof(str.c_str());
+				iss >> str;
+				double distance = std::atof(str.c_str());
+				a_star_i->came_from[node] = last;
+				a_star_i->g_score[node] = distance;
+			}
+		}
+	}
+
 	std::cout << "started iterating passengers \n";
 	int unconnected_passengers = 0;
 	int early_passengers = 0;

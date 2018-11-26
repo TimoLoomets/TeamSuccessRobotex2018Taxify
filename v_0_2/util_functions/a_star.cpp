@@ -14,6 +14,7 @@ class a_star_instance{
 	std::set<std::pair<double, double> > open_set;
 	std::map<std::pair<double, double>, std::pair<double, double> > came_from;
 	std::map<std::pair<double, double>, double> g_score;
+	std::pair<double, double> start_loc;
 	/*<deprecated>*/
 	double path_length(	std::vector<std::pair<double, double> > path,
 						std::map<std::pair<double, double>, std::map<std::pair<double, double>, double> > * graph){
@@ -33,8 +34,9 @@ class a_star_instance{
 		return total_path;
 	}
 
-	void set_start(std::pair<double, double> start_loc,
+	void set_start(std::pair<double, double> start_loc_in,
 				   std::map<std::pair<double, double>, std::map<std::pair<double, double>, double> > * graph_i){
+		start_loc = start_loc_in;
 		graph = graph_i;
 		closed_set = std::set<std::pair<double, double> >();
 		open_set = std::set<std::pair<double, double> >();
@@ -111,6 +113,11 @@ class a_star_instance{
 		calculate_path_to(end_loc);
 		//std::cout << "\treturning \n";
 		return g_score[end_loc];
+	}
+
+	std::pair<double, double> get_last_to(std::pair<double, double> end_loc){
+		calculate_path_to(end_loc);
+		return came_from[end_loc];
 	}
 };
 
