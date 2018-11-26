@@ -24,6 +24,9 @@ public:
 	std::set<std::pair<double, double> > end_nodes;
 	int on_board_timer = 0;
 	int deploy_early = 0;
+	bool in_car = false;
+	long int epoch_start;
+	long int epoch_end;
 };
 
 class car_data
@@ -34,10 +37,11 @@ public:
 	std::set<passenger_data * > current_passengers;
 	std::set<passenger_data * > passenger_log;
 	int battery = 200000;
-	std::set<std::pair<double, double> > current_path;
+	std::vector<std::pair<double, double> > current_path;
 	bool usable = true;
 	bool at_depo = true;
 	bool charging = false;
+	int time = 0;
 };
 
 class depo_data 

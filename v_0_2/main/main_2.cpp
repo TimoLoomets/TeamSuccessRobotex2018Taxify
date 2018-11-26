@@ -24,6 +24,7 @@ int main(){
 	
 	std::cout << "started adding depos \n";
 	add_depos_to_graph(map_graph_pointer, &all_depos);
+	std::vector<car_data> working_cars;
 
 	std::cout << "started iterating depos \n";
 	std::vector<a_star_instance> depos_a_stars;
@@ -49,10 +50,109 @@ int main(){
 	std::cout << "started iterating passengers \n";
 	int unconnected_passengers = 0;
 	int early_passengers = 0;
-	long int
+	long int last_epoch_time = 0;
+	int my_counter = 0;
 	for(std::vector<passenger_data>::iterator all_passengers_i = all_passengers.begin(); all_passengers_i != all_passengers.end(); all_passengers_i++){
-		std::cout << "adding passenger: " << all_passengers_i->epoch_time << "\n";
+		std::cout << "loop " << my_counter << " start\n";
+		my_counter++;
+		std::cout << "\tcalculating passed time\n";
+		long int passed_time;
+		if(last_epoch_time != 0)passed_time = all_passengers_i->epoch_time - last_epoch_time;
+		else passed_time = 0;
+		std::cout << "\tpassed time: " << passed_time << "\n";
+		if(passed_time != 0){
+			std::cout << "\tcalculating car new locations\n";
+			for(std::vector<depo_data>::iterator all_depos_i = all_depos.begin(); all_depos_i != all_depos.end(); all_depos_i++){
+				for(std::vector<car_data>::iterator cars_i = all_depos_i->cars.begin(); cars_i != all_depos_i->cars.end(); cars_i++){
+					cars_i->time += passed_time;
+					for(std::vector<std::pair<double, double> >::iterator node_i = cars_i->current_path.begin(); node_i != cars_i->current_path.end(); node_i++){
+						int time_to_node = map_graph_pointer->find(cars_i->location)->second.find(*node_i)->second / car_speed;
+						if(cars_i->time >= time_to_node){
+							cars_i->location = *node_i;
+							cars_i->time -= time_to_node;
+							cars_i->current_path.erase(node_i);
+							for(passenger_data * current_passenger: cars_i->current_passengers){//std::set<passenger_data *>::iterator passenger_i = cars_i->current_passengers.begin(); passenger_i != cars_i->current_passengers.end(); passenger_i++){
+								if(*node_i == std::make_pair(current_passenger->start_lat, current_passenger->start_lon) && !current_passenger->in_car){
+									current_passenger->in_car = true;
+									current_passenger->epoch_start = all_passengers_i->epoch_time - cars_i->time;
+								}else if(*node_i == std::make_pair(current_passenger->end_lat, current_passenger->end_lon) && current_passenger->in_car){
+									current_passenger->in_car = false;
+									current_passenger->epoch_end = all_passengers_i->epoch_time - cars_i->time;
+									cars_i->passenger_log.insert(current_passenger);
+									cars_i->current_passengers.erase(cars_i->current_passengers.find(current_passenger));//passenger_i);
+								}else if(all_passengers_i->epoch_time - cars_i->time - current_passenger->epoch_start > max_destination_time){
+									current_passenger->epoch_end = all_passengers_i->epoch_time - cars_i->time;
+									cars_i->current_passengers.erase(cars_i->current_passengers.find(current_passenger));
+									std::cout << "\t\tpassenger died in car: " << cars_i->id << "\n";
+								}
+							}
+						}
+					}
+					bool in_depo = false;
+					for(depo_data possible_depo: all_depos){
+						if(cars_i->location == std::make_pair(possible_depo.lat, possible_depo.lon)){
+							in_depo = true;
+						}
+					}
+				}
+				for(std::vector<car_data>::iterator cars_i = working_cars.begin(); cars_i != working_cars.end(); cars_i++){
+					cars_i->time += passed_time;
+					for(std::vector<std::pair<double, double> >::iterator node_i = cars_i->current_path.begin(); node_i != cars_i->current_path.end(); node_i++){
+						int time_to_node = map_graph_pointer->find(cars_i->location)->second.find(*node_i)->second / car_speed;
+						if(cars_i->time >= time_to_node){
+							cars_i->location = *node_i;
+							cars_i->time -= time_to_node;
+							cars_i->current_path.erase(node_i);
+							for(passenger_data * current_passenger: cars_i->current_passengers){
+								if(*node_i == std::make_pair(current_passenger->start_lat, current_passenger->start_lon) && !current_passenger->in_car){
+									current_passenger->in_car = true;
+									current_passenger->epoch_start = all_passengers_i->epoch_time - cars_i->time;
+								}else if(*node_i == std::make_pair(current_passenger->end_lat, current_passenger->end_lon) && current_passenger->in_car){
+									current_passenger->in_car = false;
+									current_passenger->epoch_end = all_passengers_i->epoch_time - cars_i->time;
+									cars_i->passenger_log.insert(current_passenger);
+									cars_i->current_passengers.erase(cars_i->current_passengers.find(current_passenger));//passenger_i);
+								}else if(all_passengers_i->epoch_time - cars_i->time - current_passenger->epoch_start > max_destination_time){
+									current_passenger->epoch_end = all_passengers_i->epoch_time - cars_i->time;
+									cars_i->current_passengers.erase(cars_i->current_passengers.find(current_passenger));
+									std::cout << "\t\tpassenger died in car: " << cars_i->id << "\n";
+								}
+							}
+						}
+					}
+					bool in_depo = false;
+					for(depo_data possible_depo: all_depos){
+						if(cars_i->location == std::make_pair(possible_depo.lat, possible_depo.lon)){
+							in_depo = true;
+						}
+					}
+				}
+			}
+			for(std::vector<depo_data>::iterator all_depos_i = all_depos.begin(); all_depos_i != all_depos.end(); all_depos_i++){
+				for(std::vector<car_data>::iterator cars_i = all_depos_i->cars.begin(); cars_i != all_depos_i->cars.end(); cars_i++){
+
+				}
+			}
+		}
+
+		std::cout << "\tadding passenger: " << all_passengers_i->epoch_time << "\n";
 		add_passenger_to_graph(map_graph_pointer, &(*all_passengers_i));
+
+		car_data * best_car;
+		double best_distance = DBL_MAX;
+		a_star_instance passenger_a_star;
+		passenger_a_star.set_start(std::make_pair(all_passengers_i->start_lat, all_passengers_i->start_lon), map_graph_pointer);
+		for(std::vector<car_data>::iterator cars_i = working_cars.begin(); cars_i != working_cars.end(); cars_i++){
+			double car_haversine_distance = haversine_distance(all_passengers_i->start_lat, all_passengers_i->start_lon, cars_i->location.first, cars_i->location.second);
+			if(car_haversine_distance < car_speed * rider_decay){
+				double car_a_star_distance = passenger_a_star.get_distance_to(cars_i->location);
+				if(car_a_star_distance < best_distance){
+					best_car = &(*cars_i);
+					best_distance = car_a_star_distance;
+				}
+			}
+		}
+
 		if(all_passengers_i->start_nodes.size() > 0 && all_passengers_i->end_nodes.size() > 0){
 			int best_depo;
 			double best_distance = DBL_MAX;
@@ -64,7 +164,7 @@ int main(){
 				}
 			}
 			std::cout << "\tcalculating distance to drive \n";
-			std::cout << "best depo: " << best_depo << "\n";
+			std::cout << "\tbest depo: " << best_depo << "\n";
 			double distance_to_drive = depos_a_stars[best_depo].get_distance_to(std::make_pair(all_passengers_i->start_lat, all_passengers_i->start_lon));
 			double time_to_drive = distance_to_drive / car_speed;
 			if(time_to_drive > rider_decay){
